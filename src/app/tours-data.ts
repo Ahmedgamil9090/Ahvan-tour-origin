@@ -1,7 +1,10 @@
 export const CONTACTS = {
-  whatsapp: "201556464007",
-  instagram: "ahvantour",
-  telegram: "ahvantour"
+  phone: "+20 15 56464007", // Твой номер для звонков
+  whatsapp: "+20 15 56464007", // Номер без + для ссылки
+  telegram: "https://t.me/yourname",
+  instagram: "https://instagram.com/yourname",
+  tiktok: "https://tiktok.com/@yourname",
+  facebook: "https://facebook.com/yourpage",
 };
 
 export const LANGUAGES: any = {
@@ -466,13 +469,13 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
     fr: "Bateau rapide privé",
     ro: "Barcă rapidă privată"
   },
-  desc: {
-    ru: "Индивидуальная прогулка на скоростном катере — это свобода и адреналин. Никаких толп и жестких графиков. Вы сами выбираете маршрут: необитаемые острова, лучшие рифы для снорклинга или поиск дельфинов. Идеально для пар, семей или небольших компаний.\n\nПреимущества:\n• Полная приватность (только ваша компания)\n• Скорость: добираемся до локаций в 3 раза быстрее яхт\n• Гибкое время выезда\n• Снорклинг в самых чистых местах",
-    en: "A private speed boat trip means freedom and adrenaline. No crowds, no fixed schedules. You choose your own route: uninhabited islands, the best snorkeling reefs, or dolphin watching. Perfect for couples, families, or small groups.\n\nAdvantages:\n• Full privacy (only your group)\n• Speed: reach locations 3 times faster than yachts\n• Flexible departure time\n• Snorkeling in the most pristine spots",
-    de: "Eine private Schnellbootfahrt bedeutet Freiheit und Adrenalin. Keine Menschenmassen, kein fester Zeitplan. Sie wählen Ihre eigene Route.\n\nVorteile:\n• Komplette Privatsphäre\n• 3-mal schneller als Yachten\n• Flexible Zeiten",
-    pl: "Prywatna motorówka to wolność i adrenalina. Żadnych tłumów, żadnych sztywnych grafików. Sam wybierasz trasę: bezludne wyspy lub najlepsze rafy.\n\nZalety:\n• Pełna prywatność\n• Szybkość: docieramy na miejsce 3 razy szybciej niż jachty\n• Elastyczne godziny",
-    fr: "Une sortie privée en bateau rapide, c'est la liberté. Pas de foule, pas d'horaires fixes. Vous choisissez votre propre itinéraire.\n\nAvantages:\n• Intimité totale\n• Vitesse: 3 fois plus rapide que les yachts\n• Horaires flexibles",
-    ro: "O excursie privată cu barca rapidă înseamnă libertate și adrenalină. Fără aglomerație, fără programe fixe. Îți alegi propriul traseu.\n\nAvantaje:\n• Privativitate deplină\n• Viteză: ajungi la locații de 3 ori mai repede decât iahturile\n• Program flexibil"
+ desc: {
+    de: "Erlebe das Rote Meer auf eine der aufregendsten Arten – mit einer privaten Speedboot-Tour.\n\n⏱️ 3 STUNDEN TOUR:\n• 1–2 Schnorchelstopps 🐠\n• Möglichkeit, Delfine zu sehen 🐬\n• Kurzer Aufenthalt auf einer Insel\n• Ideal für Familien & Paare mit wenig Zeit.\n\n🌴 6 STUNDEN TOUR:\n• 2–3 Schnorchelstopps an verschiedenen Riffen\n• Besuch von Delfin-Gebieten (höhere Chance)\n• Aufenthalt auf Orange Bay oder Giftun Island\n• Zeit zum Entspannen & Fotos machen\n\n🔥 PRIVAT & INDIVIDUELL: Keine überfüllten Boote, flexible Route nach Wunsch!",
+    ru: "Приватный скоростной катер — это свобода и адреналин без толпы и очередей.\n\n⏱️ ТУР НА 3 ЧАСА:\n• 1–2 остановки для снорклинга 🐠\n• Поиск дельфинов 🐬\n• Короткая высадка на остров\n• Идеально, если у вас мало времени.\n\n🌴 ТУР НА 6 ЧАСОВ:\n• 2–3 остановки на разных рифах\n• Посещение мест обитания дельфинов (высокий шанс)\n• Отдых на островах Orange Bay или Giftun\n• Максимум времени для фото и релакса\n\n🔥 ПРЕИМУЩЕСТВА: Полная приватность, гибкий маршрут и отсутствие посторонних на борту!",
+    en: "Experience the Red Sea in the most exciting way – with a private speed boat tour.\n\n⏱️ 3-HOUR TOUR:\n• 1–2 snorkeling stops 🐠\n• Chance to see dolphins 🐬\n• Short island stay\n• Perfect for those with limited time.\n\n🌴 6-HOUR TOUR:\n• 2–3 snorkeling stops at various reefs\n• Visit dolphin habitats (higher chance)\n• Relax on Orange Bay or Giftun Island\n• Plenty of time for photos & chilling\n\n🔥 WHY US? Private & individual, no crowds, flexible route according to your wishes!",
+    pl: "Prywatna motorówka to wolność i adrenalina. Żadnych tłumów, tylko Ty i morze.\n\n⏱️ REJS 3-GODZINNY: Snurkowanie, szukanie delfinów, krótki pobyt na wyspie.\n🌴 REJS 6-GODZINNY: Więcej raf, wyspy Orange Bay lub Giftun, dużo czasu na relaks.\n🔥 PRYWATNIE: Elastyczna trasa i pełen komfort.",
+    fr: "Sortie privée en bateau rapide. Pas de foule, juste du plaisir.\n\n⏱️ TOUR 3H: Snorkeling, dauphins et arrêt sur une île.\n🌴 TOUR 6H: Plusieurs récifs, Orange Bay ou Giftun, détente totale.\n🔥 PRIVÉ: Itinéraire flexible selon vos envies.",
+    ro: "Excursie privată cu barca rapidă. Fără aglomerație, doar libertate.\n\n⏱️ TUR 3 ORE: Snorkeling, căutarea delfinilor, scurt popas pe insulă.\n🌴 TUR 6 ORE: Mai multe recife, vizită pe Orange Bay sau Giftun, relaxare.\n🔥 PRIVAT: Traseu flexibil în funcție de dorințele tale."
   },
   gallery: [
     "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/08/0b/7e/aa.jpg", // Рифы

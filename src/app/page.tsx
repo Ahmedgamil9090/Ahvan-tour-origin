@@ -238,14 +238,63 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer id="contact" className="py-20 text-center bg-slate-950 text-white scroll-mt-20">
-          <div className="text-4xl font-black italic text-orange-600 mb-6 tracking-tighter uppercase">AhVan Tour</div>
-          <div className="flex justify-center gap-8 mb-8 opacity-50">
-              <Instagram className="hover:text-orange-500 cursor-pointer transition-colors" size={20} />
-              <Send className="hover:text-orange-500 cursor-pointer transition-colors" size={20} />
-              <Facebook className="hover:text-orange-500 cursor-pointer transition-colors" size={20} />
+      <footer id="contact" className="py-20 bg-slate-950 text-white scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col items-center">
+            
+            {/* Logo */}
+            <div className="text-4xl font-black italic text-orange-600 mb-4 tracking-tighter uppercase">
+              AhVan Tour
+            </div>
+            
+            {/* Phone Number */}
+            <a 
+              href={`tel:${CONTACTS.phone}`} 
+              className="text-xl font-bold mb-10 hover:text-orange-500 transition-colors tracking-widest"
+            >
+              {CONTACTS.phone}
+            </a>
+
+            {/* Social Grid */}
+            <div className="grid grid-cols-3 md:grid-cols-6 gap-8 mb-12">
+              <a href={CONTACTS.instagram} target="_blank" className="flex flex-col items-center gap-2 group">
+                <Instagram className="group-hover:text-orange-500 transition-colors" size={24} />
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">Instagram</span>
+              </a>
+              
+              <a href={`https://wa.me/${CONTACTS.whatsapp}`} target="_blank" className="flex flex-col items-center gap-2 group">
+                <div className="font-bold text-xl group-hover:text-orange-500 transition-colors">WA</div>
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">WhatsApp</span>
+              </a>
+
+              <a href={CONTACTS.telegram} target="_blank" className="flex flex-col items-center gap-2 group">
+                <Send className="group-hover:text-orange-500 transition-colors" size={24} />
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">Telegram</span>
+              </a>
+
+              <a href={CONTACTS.tiktok} target="_blank" className="flex flex-col items-center gap-2 group">
+                <div className="font-bold text-xl group-hover:text-orange-500 transition-colors">TT</div>
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">TikTok</span>
+              </a>
+
+              <a href={CONTACTS.facebook} target="_blank" className="flex flex-col items-center gap-2 group">
+                <Facebook className="group-hover:text-orange-500 transition-colors" size={24} />
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">Facebook</span>
+              </a>
+
+              <a href="#" className="flex flex-col items-center gap-2 group">
+                <X className="group-hover:text-orange-500 transition-colors" size={24} />
+                <span className="text-[9px] uppercase font-bold tracking-widest opacity-50">Twitter</span>
+              </a>
+            </div>
+
+            <div className="h-px w-20 bg-orange-600/30 mb-8"></div>
+            
+            <p className="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-bold">
+              Quality matters. Since 2026.
+            </p>
           </div>
-          <p className="text-slate-500 text-[10px] uppercase tracking-[0.4em] font-bold">Quality matters. Since 2026.</p>
+        </div>
       </footer>
     </main>
   );
