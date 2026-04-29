@@ -71,10 +71,6 @@ export default function Home() {
         </div>
       )}
 
-      const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // ... внутри return:
-
   {/* NAVIGATION */}
   <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 md:px-6 h-20 flex justify-between items-center shadow-sm">
       
