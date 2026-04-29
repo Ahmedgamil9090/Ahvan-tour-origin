@@ -230,14 +230,14 @@ Cină și Spectacol Oriental: Savurați o cină BBQ cu muzică orientală și da
     image: "https://media.istockphoto.com/id/175526084/photo/entrance-of-luxor-temple-egypt.jpg?s=2048x2048&w=is&k=20&c=b2UTpXEiPQras1FjAaGNPlYCZAdJVsXu3F-7sE_GsJU=",
     price: 50,
     names: { ru: "Луксор", en: "Luxor", de: "Luxor", pl: "Luksor", fr: "Louxor", ro: "Luxor" },
-    desc: { 
-      ru: "Путешествие в великое прошлое: Карнакский храм, Долина Царей, храм Хатшепсут и Колоссы Мемнона. Узнайте тайны фараонов.",
-      en: "A journey into the great past: Karnak Temple, Valley of the Kings, Hatshepsut Temple, and Colossi of Memnon.",
-      de: "Eine Reise in die Vergangenheit: Karnak-Tempel, Tal der Könige, Hatschepsut-Tempel und Memnonkolosse.",
-      pl: "Podróż do przeszłości: Świątynia Karnak, Dolina Królów i Świątynia Hatszepsut.",
-      fr: "Un voyage dans le passé : temple de Karnak, vallée des Rois et temple d'Hatchepsout.",
-      ro: "O călătorie în trecut: Templul Karnak, Valea Regilor și Templul Hatshepsut."
-    },
+    desc: {
+    ru: "Путешествие из Хургады в Луксор — это погружение в сердце древней цивилизации. Вы увидите величайшие памятники истории своими глазами.\n\n🏛️ В программе:\n• Карнакский храм — крупнейший храмовый комплекс\n• Долина Царей — гробницы великих фараонов\n• Храм Хатшепсут — уникальный террасный храм\n• Колоссы Мемнона\n\n🕐 Примерный план:\n• 04:00 — Выезд из Хургады\n• 09:00 — Прибытие в Луксор\n• Экскурсии и обед в местном ресторане\n• 18:00 — Обратный выезд\n• 22:00 — Приезд в отель",
+    en: "A journey from Hurghada to Luxor is a dive into the heart of ancient civilization. You will see the greatest historical monuments with your own eyes.\n\n🏛️ Highlights:\n• Karnak Temple — the largest temple complex\n• Valley of the Kings — tombs of the Pharaohs\n• Hatshepsut Temple — unique terraced temple\n• Colossi of Memnon\n\n🕐 Sample Schedule:\n• 04:00 — Departure from Hurghada\n• 09:00 — Arrival in Luxor\n• Sightseeing and lunch in a local restaurant\n• 18:00 — Return journey\n• 22:00 — Back at the hotel",
+    de: "Eine Reise von Hurghada nach Luxor verbindet das Rote Meer mit der faszinierenden Pharaonenkultur.\n\n🏛️ Sehenswürdigkeiten:\n• Karnak-Tempel — Größte Tempelanlage Ägyptens\n• Tal der Könige — Begräbnisstätte der Pharaonen\n• Tempel der Hatschepsut — Einzigartiger Terrassentempel\n• Memnonkolosse\n\n🕐 Beispiel für einen Tagesplan:\n• 04:00 Uhr: Abfahrt aus Hurghada\n• 09:00 Uhr: Ankunft in Luxor\n• Besichtigung & Mittagessen\n• 18:00 Uhr: Rückfahrt\n• 22:00 Uhr: Ankunft in Hurghada",
+    pl: "Podróż z Hurghady do Luksoru to zanurzenie się w sercu starożytnej cywilizacji. Zobaczysz najwspanialsze zabytki historii.\n\n🏛️ W programie:\n• Świątynia Karnak\n• Dolina Królów\n• Świątynia Hatszepsut\n• Kolosy Memnona\n\n🕐 Plan dnia:\n• 04:00 — Wyjazd z Hurghady\n• 09:00 — Przyjazd do Luksoru\n• Zwiedzanie i lunch\n• 18:00 — Powrót\n• 22:00 — Przyjazd do hotelu",
+    fr: "Un voyage de Hurghada à Louxor est une plongée au cœur de la civilisation ancienne.\n\n🏛️ Au programme:\n• Temple de Karnak\n• Vallée des Rois\n• Temple d'Hatchepsout\n• Colosses de Memnon\n\n🕐 Horaire type:\n• 04:00 — Départ d'Hurghada\n• 09:00 — Arrivée à Louxor\n• Visites et déjeuner\n• 18:00 — Retour\n• 22:00 — Arrivée à l'hôtel",
+    ro: "O călătorie de la Hurghada la Luxor este o scufundare în inima civilizației antice.\n\n🏛️ Atracții:\n• Templul Karnak\n• Valea Regilor\n• Templul Hatshepsut\n• Coloșii din Memnon\n\n🕐 Program estimat:\n• 04:00 — Plecare din Hurghada\n• 09:00 — Sosire în Luxor\n• Vizite și prânz\n• 18:00 — Plecare spre casă\n• 22:00 — Sosire la hotel"
+  },
     gallery: [
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/02/60/dc/f5/temple-of-karnak.jpg?w=900&h=-1&s=1",
       "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/2d/bc/a9/photo2jpg.jpg?w=1400&h=-1&s=1",
