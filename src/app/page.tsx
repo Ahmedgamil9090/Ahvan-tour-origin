@@ -128,7 +128,7 @@ export default function Home() {
       {/* NAVIGATION */}
       <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
         <a href="#home" className="flex items-center h-full">
-           <img src="/ahvan.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain" />
+           <img src="/logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain" />
         </a>
         <div className="hidden lg:flex gap-7 items-center ml-auto mr-8">
           {Object.entries(menu).map(([key, label]: any) => (
@@ -194,7 +194,7 @@ export default function Home() {
             
             <div className="relative flex justify-center items-center">
               <div className="relative z-10 w-full aspect-square max-w-[500px] bg-white rounded-[3.5rem] shadow-2xl border-8 border-white flex items-center justify-center p-12 overflow-hidden group">
-                <img src="/ahvan.svg" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" alt="Logo" />
+                <img src="/logo.svg" className="w-full h-auto transition-transform duration-700 group-hover:scale-105" alt="Logo" />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-orange-600 text-white p-8 rounded-3xl shadow-xl hidden md:block z-20">
                 <div className="text-4xl font-black italic leading-none">2006</div>
