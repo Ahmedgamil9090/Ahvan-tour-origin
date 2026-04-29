@@ -457,7 +457,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
  
     {
   id: 8, // Проверь ID, чтобы не дублировался
-  image: "/images/tours/submarine-main.jpg", // Главное фото
+  image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/72/5d/d2/caption.jpg", // Главное фото
   price: 45,
   names: {
     ru: "Подводная лодка (Submarine)",
@@ -477,9 +477,13 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   },
   gallery: [
     "https://images.unsplash.com/photo-1583212292454-1fe6229603b7?q=80&w=1000",
-    "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=1000",
-    "https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=1000",
-    "https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&w=1000"
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/f0/c5.jpg",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/72/60/ab/caption.jpg",
+    "https://images.unsplash.com/photo-1518467166778-b88f373ffec7?q=80&w=1000",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/c0/f0/d0.jpg",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/95/1b/90/caption.jpg",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/72/5d/d1/caption.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/70/47/c3/caption.jpg?w=1400&h=-1&s=1",
   ]
 },
 {
