@@ -520,7 +520,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   ]
 },
 {
-    id: 8,
+    id: 9,
     image: "https://freebirdtravel.net/ImageBank/sea%20trip/-ImageBank-sea-trip-5833-jpg_856x450_5833.jpg",
     price: 22,
     names: { 
@@ -574,4 +574,10 @@ Zborul singur sau în pereche la 30–40 de metri deasupra mării timp de 4 pân
     ]
   },
 ];
-
+export const menu = {
+  home: "Home",
+  tours: "Tours",
+  gallery: "Gallery",
+  contact: "Contact",
+  privacy: "Data Protection"
+};
