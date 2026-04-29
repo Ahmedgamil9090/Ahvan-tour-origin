@@ -66,23 +66,13 @@ export default function Home() {
 
       {/* NAVIGATION */}
       <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-50 px-6 h-20 flex justify-between items-center shadow-sm">
-          {/* LOGO GROUP */}
-          <a href="#home" className="flex items-center gap-3 group transition-transform hover:scale-105 active:scale-95">
-            <div className="relative w-12 h-12 flex items-center justify-center">
-              <img 
-                src="/logo.svg" 
-                alt="AhVan Tour" 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="flex flex-col justify-center">
-              <span className="font-black text-orange-600 italic text-xl leading-none uppercase tracking-tighter">
-                AhVan
-              </span>
-              <span className="text-slate-400 text-[9px] tracking-[0.4em] font-bold uppercase leading-none mt-1">
-                Tour
-              </span>
-            </div>
+          {/* LOGO ONLY */}
+          <a href="#home" className="flex items-center h-full group transition-transform hover:scale-105 active:scale-95">
+            <img 
+              src="/logo.svg" 
+              alt="AhVan Tour" 
+              className="h-16 w-auto object-contain py-1" 
+            />
           </a>
 
           {/* DESKTOP MENU */}
