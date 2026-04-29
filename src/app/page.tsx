@@ -1,146 +1,62 @@
-'use client';
-import { useState } from 'react';
-// Добавляем Menu и X в список импортов из lucide-react
-import { Instagram, Send, Facebook, Car, Plane, MapPin, Images, Menu } from 'lucide-react';
-import { TOURS, CONTACTS, LANGUAGES } from './tours-data';
-
-export default function Home() {
-  const [lang, setLang] = useState('en'); 
-  const [activeAlbum, setActiveAlbum] = useState<any>(null); 
-  
-  // ДОБАВЬ ЭТУ СТРОКУ: она отвечает за то, открыто меню или нет
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const t = LANGUAGES[lang];
-
-  // ... дальше твой остальной код (menu, return и т.д.)
-
-  const menu = {
-    ru: { home: "Главная", trips: "Экскурсии", gallery: "Галерея", transfer: "Трансфер", contact: "Контакты" },
-    en: { home: "Home", trips: "Trips", gallery: "Gallery", transfer: "Transfer", contact: "Contacts" },
-    de: { home: "Startseite", trips: "Touren", gallery: "Galerie", transfer: "Transfer", contact: "Kontakte" },
-    pl: { home: "Główna", trips: "Wycieczki", gallery: "Galeria", transfer: "Transfer", contact: "Kontakt" },
-    fr: { home: "Accueil", trips: "Excursions", gallery: "Galerie", transfer: "Transfert", contact: "Contacts" },
-    ro: { home: "Acasă", trips: "Tururi", gallery: "Galerie", transfer: "Transfer", contact: "Contact" }
-  }[lang] || { home: "Home", trips: "Trips", gallery: "Gallery", transfer: "Transfer", contact: "Contacts" };
-
-  return (
-    <main className="min-h-screen bg-white text-slate-900 font-sans antialiased">
-      
-      {/* MODAL GALLERY & DESCRIPTION */}
-      {activeAlbum && (
-        <div className="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4">
-          <button 
-            onClick={() => setActiveAlbum(null)} 
-            className="absolute top-6 right-6 text-white hover:text-orange-500 transition-colors z-[210]"
-          >
-          </button>
-          
-          <div className="max-w-6xl w-full h-full overflow-y-auto p-4 custom-scrollbar">
-            <h2 className="text-white text-4xl md:text-6xl font-black uppercase italic mb-10 mt-16 tracking-tighter">
-              {activeAlbum.names[lang]}
-            </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-              {activeAlbum.gallery?.map((img: string, idx: number) => (
-                <div key={idx} className="aspect-square overflow-hidden rounded-2xl bg-slate-800 shadow-2xl border border-white/5">
-                  <img src={img} className="w-full h-full object-cover" alt="" loading="lazy" />
-                </div>
-              ))}
+{/* 1. MODAL DATA PROTECTION (Тот самый, что идет после контактов) */}
+      {isPrivacyOpen && (
+        <div className="fixed inset-0 z-[300] bg-slate-950/90 backdrop-blur-md flex items-center justify-center p-4">
+          <div className="bg-white w-full max-w-2xl max-h-[80vh] rounded-[2.5rem] overflow-hidden flex flex-col shadow-2xl">
+            <div className="p-8 border-b flex justify-between items-center bg-slate-50">
+              <span className="font-black uppercase italic tracking-tighter text-xl text-slate-900">Data Protection</span>
+              <button onClick={() => setIsPrivacyOpen(false)} className="text-slate-400 hover:text-black transition-colors"><X /></button>
             </div>
-
-            <div className="max-w-4xl bg-white/5 rounded-3xl p-8 md:p-12 mb-20 border border-white/10 backdrop-blur-sm">
-              <h3 className="text-orange-500 font-black uppercase tracking-[0.3em] text-sm mb-6">
-                {lang === 'ru' ? 'О программе экскурсии' : 'About the program'}
-              </h3>
-              <p className="text-white text-xl md:text-2xl leading-relaxed font-medium opacity-90 whitespace-pre-line">
-                {activeAlbum.desc[lang]}
-              </p>
-              <div className="mt-10">
-                <a 
-                  href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent(t.waHello + activeAlbum.names[lang])}`} 
-                  target="_blank" 
-                  className="bg-orange-600 text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-orange-500 transition-all inline-block"
-                >
-                  {t.btn} — ${activeAlbum.price}
-                </a>
-              </div>
+            <div className="p-8 overflow-y-auto text-sm text-slate-600 space-y-6 leading-relaxed custom-scrollbar">
+              <p className="font-bold">Responsible: Basem Hakim</p>
+              <p>We process data exclusively for tour bookings via WhatsApp. No third-party data distribution.</p>
+              <p>You have the right to request deletion of your contact data at any time.</p>
+            </div>
+            <div className="p-6 bg-slate-50 border-t">
+              <button onClick={() => setIsPrivacyOpen(false)} className="w-full bg-slate-900 text-white py-4 rounded-2xl font-black uppercase tracking-widest text-xs">Close</button>
             </div>
           </div>
         </div>
       )}
 
-  {/* NAVIGATION */}
-  <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
-      
-      {/* LOGO - Слева */}
-      <a href="#home" className="flex items-center h-full transition-transform active:scale-95 shrink-0">
-        <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100">
-          <img 
-            src="/logo.svg" 
-            alt="AhVan Tour" 
-            className="h-10 md:h-14 w-auto object-contain" 
-          />
-        </div>
-      </a>
+      {/* 2. NAVIGATION (С обновленным меню) */}
+      <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
+        <a href="#home" className="flex items-center h-full shrink-0">
+          <div className="bg-white p-1 rounded-lg border border-slate-100">
+            <img src="/logo.svg" alt="AhVan Tour" className="h-10 md:h-14 w-auto object-contain" />
+          </div>
+        </a>
 
-      {/* BRAND NAME - Виден ТОЛЬКО на мобиле по центру */}
-      <div className="flex lg:hidden flex-col items-center justify-center">
-        <span className="font-black text-orange-600 italic text-lg leading-none uppercase tracking-tighter">
-          AhVan
-        </span>
-        <span className="text-slate-400 text-[8px] tracking-[0.3em] font-bold uppercase leading-none mt-1">
-          Tour
-        </span>
-      </div>
-
-      {/* DESKTOP MENU - Видно только на десктопе */}
-      <div className="hidden lg:flex gap-9 items-center ml-auto mr-8">
-        {Object.entries(menu).map(([key, label]) => (
-          <a key={key} href={`#${key}`} className="text-[11px] uppercase font-black tracking-[0.25em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
-        ))}
-        <div className="flex gap-1 ml-4 border-l pl-6">
-          {Object.keys(LANGUAGES).map((l) => (
-            <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
-          ))}
-        </div>
-      </div>
-
-      {/* MOBILE HAMBURGER - Справа */}
-      <button 
-        className="lg:hidden p-2 text-slate-900 hover:bg-slate-50 rounded-xl transition-colors shrink-0"
-        onClick={() => setIsMenuOpen(!isMenuOpen)}
-      >
-        <Menu size={28} />
-      </button>
-
-      {/* MOBILE MENU OVERLAY - Тот же код, что был раньше */}
-      {isMenuOpen && (
-        <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-6 animate-in slide-in-from-top duration-300">
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex gap-8 items-center ml-auto mr-8">
           {Object.entries(menu).map(([key, label]) => (
-            <a 
-              key={key} 
-              href={`#${key}`} 
-              onClick={() => setIsMenuOpen(false)}
-              className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic"
-            >
-              {label}
-            </a>
+            <a key={key} href={`#${key}`} className="text-[11px] uppercase font-black tracking-[0.2em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
           ))}
-          <div className="flex flex-wrap gap-2 pt-4">
+          <div className="flex gap-1 ml-4 border-l pl-6">
             {Object.keys(LANGUAGES).map((l) => (
-              <button 
-                key={l} 
-                onClick={() => { setLang(l); setIsMenuOpen(false); }} 
-                className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border transition-all ${lang === l ? 'bg-orange-600 text-white border-orange-600 shadow-md' : 'bg-slate-50 text-slate-500 border-slate-100'}`}
-              >
-                {LANGUAGES[l].name}
-              </button>
+              <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
             ))}
           </div>
         </div>
-      )}
-  </nav>
+
+        {/* Mobile Hamburger */}
+        <button className="lg:hidden p-2 text-slate-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          <Menu size={28} />
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-5 animate-in slide-in-from-top">
+            {Object.entries(menu).map(([key, label]) => (
+              <a key={key} href={`#${key}`} onClick={() => setIsMenuOpen(false)} className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic">{label}</a>
+            ))}
+            <div className="flex flex-wrap gap-2 pt-4">
+              {Object.keys(LANGUAGES).map((l) => (
+                <button key={l} onClick={() => { setLang(l); setIsMenuOpen(false); }} className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'bg-slate-50 text-slate-500'}`}>{LANGUAGES[l].name}</button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
 
       {/* HERO */}
       <section id="home" className="relative h-[85vh] flex items-center justify-center text-center overflow-hidden bg-slate-900" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i2.wp.com/see.news/images/2024/03/-1711659992-0.jpg?resize=750,500&ssl=1')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
