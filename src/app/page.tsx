@@ -72,41 +72,50 @@ export default function Home() {
       )}
 
   {/* NAVIGATION */}
-  <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 md:px-6 h-20 flex justify-between items-center shadow-sm">
+  <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
       
-      {/* LOGO - Сделали больше и ярче */}
-      <a href="#home" className="flex items-center h-full group transition-transform active:scale-95">
-        <div className="bg-white p-1.5 rounded-xl shadow-sm border border-slate-100 group-hover:shadow-md transition-all">
+      {/* LOGO - Слева */}
+      <a href="#home" className="flex items-center h-full transition-transform active:scale-95 shrink-0">
+        <div className="bg-white p-1 rounded-lg shadow-sm border border-slate-100">
           <img 
             src="/logo.svg" 
             alt="AhVan Tour" 
-            className="h-12 md:h-14 w-auto object-contain" 
+            className="h-10 md:h-14 w-auto object-contain" 
           />
         </div>
       </a>
 
-      {/* DESKTOP MENU (hidden on mobile) */}
-      <div className="hidden lg:flex gap-9 items-center">
+      {/* BRAND NAME - Виден ТОЛЬКО на мобиле по центру */}
+      <div className="flex lg:hidden flex-col items-center justify-center">
+        <span className="font-black text-orange-600 italic text-lg leading-none uppercase tracking-tighter">
+          AhVan
+        </span>
+        <span className="text-slate-400 text-[8px] tracking-[0.3em] font-bold uppercase leading-none mt-1">
+          Tour
+        </span>
+      </div>
+
+      {/* DESKTOP MENU - Видно только на десктопе */}
+      <div className="hidden lg:flex gap-9 items-center ml-auto mr-8">
         {Object.entries(menu).map(([key, label]) => (
           <a key={key} href={`#${key}`} className="text-[11px] uppercase font-black tracking-[0.25em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
         ))}
-        {/* Языки на десктопе в ряд */}
         <div className="flex gap-1 ml-4 border-l pl-6">
           {Object.keys(LANGUAGES).map((l) => (
-            <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white' : 'text-slate-400'}`}>{LANGUAGES[l].name}</button>
+            <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
           ))}
         </div>
       </div>
 
-      {/* MOBILE HAMBURGER BUTTON */}
+      {/* MOBILE HAMBURGER - Справа */}
       <button 
-        className="lg:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-xl transition-colors"
+        className="lg:hidden p-2 text-slate-900 hover:bg-slate-50 rounded-xl transition-colors shrink-0"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <Menu size={32} />
+        <Menu size={28} />
       </button>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU OVERLAY - Тот же код, что был раньше */}
       {isMenuOpen && (
         <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-6 animate-in slide-in-from-top duration-300">
           {Object.entries(menu).map(([key, label]) => (
@@ -114,7 +123,7 @@ export default function Home() {
               key={key} 
               href={`#${key}`} 
               onClick={() => setIsMenuOpen(false)}
-              className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2"
+              className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic"
             >
               {label}
             </a>
@@ -124,7 +133,7 @@ export default function Home() {
               <button 
                 key={l} 
                 onClick={() => { setLang(l); setIsMenuOpen(false); }} 
-                className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'bg-slate-50 text-slate-500'}`}
+                className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border transition-all ${lang === l ? 'bg-orange-600 text-white border-orange-600 shadow-md' : 'bg-slate-50 text-slate-500 border-slate-100'}`}
               >
                 {LANGUAGES[l].name}
               </button>
