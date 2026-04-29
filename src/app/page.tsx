@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { Instagram, Send, Facebook, X, Car, Plane, MapPin } from 'lucide-react';
+import { Instagram, Send, Facebook, X, Car, Plane, MapPin, Images } from 'lucide-react';
 import { TOURS, CONTACTS, LANGUAGES } from './tours-data';
 
 export default function Home() {
@@ -8,7 +8,6 @@ export default function Home() {
   const [activeAlbum, setActiveAlbum] = useState<any>(null); 
   const t = LANGUAGES[lang];
 
-  // Динамическое меню (Трансфер теперь после Галереи)
   const menu = {
     ru: { home: "Главная", trips: "Экскурсии", gallery: "Галерея", transfer: "Трансфер", contact: "Контакты" },
     en: { home: "Home", trips: "Trips", gallery: "Gallery", transfer: "Transfer", contact: "Contacts" },
@@ -17,9 +16,6 @@ export default function Home() {
     fr: { home: "Accueil", trips: "Excursions", gallery: "Galerie", transfer: "Transfert", contact: "Contacts" },
     ro: { home: "Acasă", trips: "Tururi", gallery: "Galerie", transfer: "Transfer", contact: "Contact" }
   }[lang] || { home: "Home", trips: "Trips", gallery: "Gallery", transfer: "Transfer", contact: "Contacts" };
-
-  // Собираем все фото из всех туров для общей галереи
-  const allPhotos = TOURS.flatMap((tour: any) => tour.gallery || []);
 
   return (
     <main className="min-h-screen bg-white text-slate-900 font-sans antialiased">
@@ -54,12 +50,11 @@ export default function Home() {
               <p className="text-white text-xl md:text-2xl leading-relaxed font-medium opacity-90 whitespace-pre-line">
                 {activeAlbum.desc[lang]}
               </p>
-              
-              <div className="mt-10 flex flex-wrap gap-4">
+              <div className="mt-10">
                 <a 
                   href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent(t.waHello + activeAlbum.names[lang])}`} 
                   target="_blank" 
-                  className="bg-orange-600 text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-orange-500 transition-all"
+                  className="bg-orange-600 text-white px-8 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-orange-500 transition-all inline-block"
                 >
                   {t.btn} — ${activeAlbum.price}
                 </a>
@@ -92,16 +87,8 @@ export default function Home() {
           </div>
       </nav>
 
-      {/* HERO SECTION */}
-      <section 
-        id="home" 
-        className="relative h-[85vh] flex items-center justify-center text-center overflow-hidden bg-slate-900"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i2.wp.com/see.news/images/2024/03/-1711659992-0.jpg?resize=750,500&ssl=1')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
+      {/* HERO */}
+      <section id="home" className="relative h-[85vh] flex items-center justify-center text-center overflow-hidden bg-slate-900" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://i2.wp.com/see.news/images/2024/03/-1711659992-0.jpg?resize=750,500&ssl=1')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className="relative z-10 px-6 max-w-5xl mx-auto">
             <div className="h-1.5 w-24 bg-orange-600 mx-auto mb-10 rounded-full"></div>
             <h1 className="text-6xl md:text-9xl font-black uppercase italic tracking-tighter mb-6 leading-none text-white drop-shadow-2xl">{t.heroTitle}</h1>
@@ -118,53 +105,54 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {TOURS.map((tour: any) => (
             <div key={tour.id} className="group bg-white border border-slate-100 rounded-3xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
-              <div 
-                className="h-72 w-full relative overflow-hidden cursor-pointer" 
-                onClick={() => setActiveAlbum(tour)}
-              >
+              <div className="h-72 w-full relative overflow-hidden cursor-pointer" onClick={() => setActiveAlbum(tour)}>
                 <img src={tour.image} className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="" />
                 <div className="absolute top-5 right-5 z-20 bg-orange-600 text-white px-5 py-2 rounded-full font-black text-xs shadow-xl tracking-widest">${tour.price}</div>
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                   <div className="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest border border-white/30">View Gallery</div>
-                </div>
               </div>
-              <div className="p-8 text-slate-900">
-                <h3 className="text-2xl font-black uppercase italic mb-4 tracking-tight">{tour.names[lang]}</h3>
+              <div className="p-8">
+                <h3 className="text-2xl font-black uppercase italic mb-4 tracking-tight text-slate-900">{tour.names[lang]}</h3>
                 <p className="text-slate-500 text-sm leading-relaxed mb-8 h-12 line-clamp-2">{tour.desc[lang]}</p>
-                <a 
-                  href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent(t.waHello + tour.names[lang])}`} 
-                  target="_blank" 
-                  className="block w-full bg-slate-900 text-white text-center py-4 rounded-xl font-bold text-[11px] uppercase tracking-[0.3em] hover:bg-orange-600 transition-all shadow-lg"
-                >
-                  {t.btn}
-                </a>
+                <a href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent(t.waHello + tour.names[lang])}`} target="_blank" className="block w-full bg-slate-900 text-white text-center py-4 rounded-xl font-bold text-[11px] uppercase tracking-[0.3em] hover:bg-orange-600 transition-all shadow-lg">{t.btn}</a>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* GALLERY SECTION (НОВАЯ) */}
-      <section id="gallery" className="py-24 bg-white scroll-mt-20">
+      {/* GALLERY SECTION (Карточки альбомов) */}
+      <section id="gallery" className="py-24 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-4 text-slate-900">
               {lang === 'ru' ? 'Галерея' : 'Gallery'}
             </h2>
-            <p className="text-orange-600 uppercase tracking-widest font-bold text-xs">Capturing memories from every trip</p>
+            <p className="text-orange-600 uppercase tracking-widest font-bold text-xs italic">Explore our photo albums</p>
           </div>
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
-            {allPhotos.slice(0, 12).map((img, idx) => (
-              <div key={idx} className="break-inside-avoid rounded-2xl overflow-hidden shadow-lg border border-slate-100">
-                <img src={img} className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" alt="" loading="lazy" />
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {TOURS.map((tour: any) => (
+              <div 
+                key={tour.id} 
+                onClick={() => setActiveAlbum(tour)}
+                className="group relative h-80 rounded-3xl overflow-hidden cursor-pointer shadow-lg border border-white"
+              >
+                <img src={tour.gallery?.[0] || tour.image} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" alt="" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                <div className="absolute bottom-6 left-6 right-6">
+                   <div className="flex items-center gap-2 text-orange-500 mb-2">
+                      <Images size={16} />
+                      <span className="text-[10px] font-black uppercase tracking-widest">{tour.gallery?.length || 0} Photos</span>
+                   </div>
+                   <h3 className="text-white font-black uppercase italic tracking-tight text-xl leading-none">{tour.names[lang]}</h3>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* TRANSFER SECTION (ПЕРЕМЕЩЕНА ПОСЛЕ ГАЛЕРЕИ) */}
-      <section id="transfer" className="py-24 bg-slate-50 scroll-mt-20">
+      {/* TRANSFER SECTION */}
+      <section id="transfer" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -172,9 +160,7 @@ export default function Home() {
               <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter mb-8 leading-none text-slate-900">
                 {t.transTitle} <span className="text-orange-600">{t.transName}</span>
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                {t.transDesc}
-              </p>
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">{t.transDesc}</p>
               <div className="grid grid-cols-2 gap-6 mb-10">
                  <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider"><Plane className="text-orange-600" size={18}/> Airport Meeting</div>
                  <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider"><MapPin className="text-orange-600" size={18}/> All Egypt</div>
