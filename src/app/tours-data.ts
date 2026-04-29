@@ -494,11 +494,11 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   price: 18,
   names: {
     ru: "Подводная лодка (Submarine)",
-    en: "Sindbad Submarine",
-    de: "Sindbad U-Boot",
+    en: "Submarine",
+    de: "U-Boot",
     pl: "Łódź podwodna",
-    fr: "Sous-marin Sindbad",
-    ro: "Submarin Sindbad"
+    fr: "Sous-marin",
+    ro: "Submarin"
   },
   desc: {
     ru: "Уникальная возможность погрузиться на глубину до 22 метров, не намочив ног. Через огромные панорамные иллюминаторы вы увидите жизнь Красного моря: коралловые сады, скатов и сотни экзотических рыб. Идеально подходит для семей с детьми и тех, кто не занимается дайвингом.\n\nВ программу входит:\n• Трансфер из отеля и обратно\n• Погружение на 45-50 минут\n• Сопровождение гида\n• Остановка для фото на палубе",
