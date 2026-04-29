@@ -155,26 +155,84 @@ export default function Home() {
       <section id="transfer" className="py-24 bg-white scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Левая колонка: Текст и инфо */}
             <div>
-              <div className="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-600 text-xs font-black uppercase tracking-widest mb-6">Premium Service</div>
+              <div className="inline-block px-4 py-1 rounded-full bg-orange-100 text-orange-600 text-xs font-black uppercase tracking-widest mb-6">
+                Premium Service
+              </div>
               <h2 className="text-5xl md:text-6xl font-black uppercase italic tracking-tighter mb-8 leading-none text-slate-900">
                 {t.transTitle} <span className="text-orange-600">{t.transName}</span>
               </h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">{t.transDesc}</p>
+              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+                {t.transDesc}
+              </p>
+              
               <div className="grid grid-cols-2 gap-6 mb-10">
-                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider"><Plane className="text-orange-600" size={18}/> Airport Meeting</div>
-                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider"><MapPin className="text-orange-600" size={18}/> All Egypt</div>
-                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider"><Car className="text-orange-600" size={18}/> New Cars</div>
+                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider">
+                   <Plane className="text-orange-600" size={18}/> Airport Meeting
+                 </div>
+                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider">
+                   <MapPin className="text-orange-600" size={18}/> All Egypt
+                 </div>
+                 <div className="flex items-center gap-3 font-black uppercase text-[10px] text-slate-700 tracking-wider">
+                   <Car className="text-orange-600" size={18}/> New Cars
+                 </div>
               </div>
-              <a href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent("Hello! I want to book a transfer.")}`} target="_blank" className="bg-slate-900 text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-orange-600 transition-all inline-block">{t.btn}</a>
+              
+              <a 
+                href={`https://wa.me/${CONTACTS.whatsapp}?text=${encodeURIComponent("Hello! I want to book a transfer.")}`} 
+                target="_blank" 
+                className="bg-slate-900 text-white px-10 py-4 rounded-xl font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:bg-orange-600 transition-all inline-block"
+              >
+                {t.btn}
+              </a>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000" className="rounded-3xl shadow-xl aspect-[3/4] object-cover" alt=""/>
-              <div className="space-y-4 pt-8">
-                <img src="https://images.unsplash.com/photo-1559416523-140dd32c7c72?q=80&w=1000" className="rounded-3xl shadow-xl aspect-square object-cover" alt=""/>
-                <div className="bg-orange-600 rounded-3xl p-6 text-white font-black italic uppercase text-lg">Fast. Safe. Direct Prices.</div>
+
+            {/* Правая колонка: Сетка из 5 твоих фото */}
+            <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-4">
+                {/* Главное большое фото (вертикальное) */}
+                <img 
+                  src="/images/transfer/car1.jpg" 
+                  className="rounded-3xl shadow-xl aspect-[3/4] object-cover border border-slate-100" 
+                  alt="Our Transfer Car 1"
+                />
+                
+                <div className="space-y-4">
+                  {/* Второе фото (квадратное) */}
+                  <img 
+                    src="/images/transfer/car2.jpg" 
+                    className="rounded-3xl shadow-xl aspect-square object-cover border border-slate-100" 
+                    alt="Our Transfer Car 2"
+                  />
+                  {/* Оранжевая плашка для стиля */}
+                  <div className="bg-orange-600 rounded-3xl p-6 text-white font-black italic uppercase text-lg leading-tight shadow-lg">
+                    Fast. Safe. <br />Direct Prices.
+                  </div>
+                </div>
+              </div>
+              
+              {/* Нижний ряд из оставшихся 3-х фото */}
+              <div className="grid grid-cols-3 gap-4">
+                <img 
+                  src="/images/transfer/car3.jpg" 
+                  className="rounded-2xl shadow-md aspect-square object-cover border border-slate-100 hover:scale-105 transition-transform" 
+                  alt="Our Transfer Car 3"
+                />
+                <img 
+                  src="/images/transfer/car4.jpg" 
+                  className="rounded-2xl shadow-md aspect-square object-cover border border-slate-100 hover:scale-105 transition-transform" 
+                  alt="Our Transfer Car 4"
+                />
+                <img 
+                  src="/images/transfer/car5.jpg" 
+                  className="rounded-2xl shadow-md aspect-square object-cover border border-slate-100 hover:scale-105 transition-transform" 
+                  alt="Our Transfer Car 5"
+                />
               </div>
             </div>
+
           </div>
         </div>
       </section>
