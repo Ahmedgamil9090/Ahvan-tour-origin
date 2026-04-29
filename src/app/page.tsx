@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 // Добавляем Menu и X в список импортов из lucide-react
-import { Instagram, Send, Facebook, X, Car, Plane, MapPin, Images, Menu } from 'lucide-react';
+import { Instagram, Send, Facebook, Car, Plane, MapPin, Images, Menu } from 'lucide-react';
 import { TOURS, CONTACTS, LANGUAGES } from './tours-data';
 
 export default function Home() {
