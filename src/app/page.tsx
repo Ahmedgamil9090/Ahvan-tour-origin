@@ -11,7 +11,7 @@ export default function Home() {
 
   const t = LANGUAGES[lang];
 
-   const CONTENT_DATA: any = {
+  const CONTENT_DATA: any = {
     ru: {
       aboutTitle: "О нас",
       galleryTitle: "Галерея",
@@ -26,28 +26,10 @@ export default function Home() {
       badge: "Опыт с 2006",
       privacyTitle: "Защита данных",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>Лицом, ответственным в смысле законов о защите данных, в частности Общего регламента ЕС по защите данных (GDPR), является: <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Ваши права субъекта данных</h4>
-            <p>Вы можете в любое время воспользоваться следующими правами:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Информация о ваших данных, хранящихся у нас (ст. 15 GDPR)</li>
-              <li>Исправление неверных персональных данных (ст. 16 GDPR)</li>
-              <li>Удаление ваших данных, хранящихся у нас (ст. 17 GDPR)</li>
-              <li>Ограничение обработки данных (ст. 18 GDPR)</li>
-              <li>Возражение против обработки ваших данных (ст. 21 GDPR)</li>
-              <li>Переносимость данных (ст. 20 GDPR)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Общая информация</h4>
-            <p>При доступе к нашему веб-сайту автоматически записывается информация общего характера (лог-файлы сервера). Это включает ваш IP-адрес, тип браузера и операционную систему. Это обрабатывается для обеспечения стабильности соединения и безопасности системы на основании ст. 6 (1) (f) GDPR.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Файлы cookies</h4>
-            <p>Как и многие другие веб-сайты, мы также используем «cookies». Это небольшие текстовые файлы, хранящиеся на вашем устройстве для улучшения пользовательского опыта.</p>
-          </section>
+        <div className="space-y-4">
+          <p>Лицом, ответственным в значении законов о защите данных, является: <strong>Ahmed (Ahvan Tour)</strong></p>
+          <h4 className="font-bold border-b pb-2 text-slate-900">Ваши права</h4>
+          <p>Вы можете в любое время реализовать права на информацию, исправление, удаление и ограничение обработки ваших данных (GDPR).</p>
         </div>
       ),
       privacyClose: "Закрыть"
@@ -66,28 +48,10 @@ export default function Home() {
       badge: "Since 2006",
       privacyTitle: "Data Protection",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
-            <p>You can exercise the following rights at any time:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Information about your data stored by us (Art. 15 GDPR)</li>
-              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
-              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
-              <li>Restriction of data processing (Art. 18 GDPR)</li>
-              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
-              <li>Data transferability (Art. 20 GDPR)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
-            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
-            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
-          </section>
+        <div className="space-y-4">
+          <p>The person responsible within the meaning of the data protection laws is: <strong>Ahmed (Ahvan Tour)</strong></p>
+          <h4 className="font-bold border-b pb-2 text-slate-900">Your data subject rights</h4>
+          <p>You can exercise the following rights at any time: Information, Correction, Deletion, and Restriction of data processing (GDPR).</p>
         </div>
       ),
       privacyClose: "Close"
@@ -104,30 +68,11 @@ export default function Home() {
       slogan: "Ahvan Tour steht für Vertrauen, Erfahrung und außergewöhnlichen Service.",
       contactInvite: "Kontaktieren Sie mich gerne für weitere Informationen oder Buchungen.",
       badge: "Seit 2006",
-      privacyTitle: "Datenschutzerklärung",
+      privacyTitle: "Datenschutz",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist: <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Ihre Betroffenenrechte</h4>
-            <p>Unter den angegebenen Kontaktdaten können Sie jederzeit folgende Rechte ausüben:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Auskunft über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO)</li>
-              <li>Berichtigung unrichtiger personenbezogener Daten (Art. 16 DSGVO)</li>
-              <li>Löschung Ihrer bei uns gespeicherten Daten (Art. 17 DSGVO)</li>
-              <li>Einschränkung der Datenverarbeitung (Art. 18 DSGVO)</li>
-              <li>Widerspruch gegen die Verarbeitung Ihrer Daten (Art. 21 DSGVO)</li>
-              <li>Datenübertragbarkeit (Art. 20 DSGVO)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Allgemeine Informationen</h4>
-            <p>Beim Zugriff auf unsere Website werden automatisch Informationen allgemeiner Natur (Server-Logfiles) erfasst. Diese umfassen IP-Adresse, Browsertyp und Betriebssystem. Dies dient der Gewährleistung eines reibungslosen Verbindungsaufbaus gemäß Art. 6 Abs. 1 lit. f DSGVO.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
-            <p>Wie viele andere Webseiten verwenden wir auch so genannte „Cookies“. Das sind kleine Textdateien, die auf Ihrem Endgerät gespeichert werden, um die Nutzung der Website zu verbessern.</p>
-          </section>
+        <div className="space-y-4">
+          <p>Verantwortlich im Sinne der Datenschutzgesetze ist: <strong>Ahmed (Ahvan Tour)</strong></p>
+          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten gemäß DSGVO.</p>
         </div>
       ),
       privacyClose: "Schließen"
@@ -146,28 +91,8 @@ export default function Home() {
       badge: "Od 2006",
       privacyTitle: "Ochrona danych",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>Osobą odpowiedzialną w rozumieniu przepisów o ochronie danych, w szczególności ogólnego rozporządzenia UE o ochronie danych (RODO), jest: <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Twoje prawa jako osoby, której dane dotyczą</h4>
-            <p>W każdej chwili możesz skorzystać z następujących praw:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Informacja o Twoich danych przechowywanych u nas (art. 15 RODO)</li>
-              <li>Sprostowanie nieprawidłowych danych osobowych (art. 16 RODO)</li>
-              <li>Usunięcie Twoich danych przechowywanych u nas (art. 17 RODO)</li>
-              <li>Ograniczenie przetwarzania danych (art. 18 RODO)</li>
-              <li>Sprzeciw wobec przetwarzania Twoich danych (art. 21 RODO)</li>
-              <li>Przenoszenie danych (art. 20 RODO)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Informacje ogólne</h4>
-            <p>Podczas uzyskiwania dostępu do naszej strony internetowej automatycznie rejestrowane są informacje o charakterze ogólnym (pliki logów serwera). Obejmuje to adres IP, typ przeglądarki i system operacyjny. Jest to przetwarzane w celu zapewnienia stabilności połączenia na podstawie art. 6 ust. 1 lit. f RODO.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Pliki cookies</h4>
-            <p>Podobnie jak wiele innych stron internetowych, my również używamy tzw. „cookies”. Są to małe pliki tekstowe zapisywane na Twoim urządzeniu w celu poprawy komfortu użytkowania.</p>
-          </section>
+        <div className="space-y-4">
+          <p>Osobą odpowiedzialną za ochronę danych jest: <strong>Ahmed (Ahvan Tour)</strong></p>
         </div>
       ),
       privacyClose: "Zamknij"
@@ -186,28 +111,8 @@ export default function Home() {
       badge: "Depuis 2006",
       privacyTitle: "Protection des données",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>Le responsable au sens des lois sur la protection des données, notamment le Règlement Général sur la Protection des Données (RGPD) de l'UE, est : <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Vos droits en tant que personne concernée</h4>
-            <p>Vous pouvez exercer les droits suivants à tout moment :</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Information sur vos données stockées par nous (Art. 15 RGPD)</li>
-              <li>Correction de données personnelles incorrectes (Art. 16 RGPD)</li>
-              <li>Suppression de vos données stockées par nous (Art. 17 RGPD)</li>
-              <li>Limitation du traitement des données (Art. 18 RGPD)</li>
-              <li>Opposition au traitement de vos données (Art. 21 RGPD)</li>
-              <li>Portabilité des données (Art. 20 RGPD)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Informations générales</h4>
-            <p>Lorsque vous accédez à notre site web, des informations de nature générale (fichiers journaux du serveur) sont automatiquement enregistrées. Cela inclut votre adresse IP, le type de navigateur et le système d'exploitation, conformément à l'Art. 6 (1) (f) du RGPD.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
-            <p>Comme beaucoup d'autres sites web, nous utilisons également des "cookies". Ce sont de petits fichiers texte stockés sur votre appareil pour améliorer l'expérience utilisateur.</p>
-          </section>
+        <div className="space-y-4">
+          <p>Le responsable de la protection des données est : <strong>Ahmed (Ahvan Tour)</strong></p>
         </div>
       ),
       privacyClose: "Fermer"
@@ -226,28 +131,8 @@ export default function Home() {
       badge: "Din 2006",
       privacyTitle: "Protecția datelor",
       privacyBody: (
-        <div className="space-y-6 text-slate-600 text-left">
-          <p>Persoana responsabilă în sensul legilor privind protecția datelor, în special Regulamentul General privind Protecția Datelor (GDPR) al UE, este: <strong>Ahmed Gamil</strong></p>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Drepturile dumneavoastră</h4>
-            <p>Vă puteți exercita următoarele drepturi în orice moment:</p>
-            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
-              <li>Informații despre datele dumneavoastră stocate (Art. 15 GDPR)</li>
-              <li>Corectarea datelor cu caracter personal incorecte (Art. 16 GDPR)</li>
-              <li>Ștergerea datelor dumneavoastră stocate (Art. 17 GDPR)</li>
-              <li>Restricționarea procesării datelor (Art. 18 GDPR)</li>
-              <li>Opoziția față de prelucrarea datelor (Art. 21 GDPR)</li>
-              <li>Portabilitatea datelor (Art. 20 GDPR)</li>
-            </ul>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Informații generale</h4>
-            <p>Când accesați site-ul nostru, sunt înregistrate automat informații cu caracter general (fișiere jurnal de server). Acestea includ adresa IP, tipul de browser și sistemul de operare, în conformitate cu Art. 6 (1) (f) GDPR.</p>
-          </section>
-          <section>
-            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
-            <p>Ca multe alte site-uri web, folosim și noi așa-numitele „cookies”. Acestea sunt fișiere text mici stocate pe dispozitivul dumneavoastră pentru a îmbunătăți experiența utilizatorului.</p>
-          </section>
+        <div className="space-y-4">
+          <p>Persoana responsabilă este: <strong>Ahmed (Ahvan Tour)</strong></p>
         </div>
       ),
       privacyClose: "Închide"
@@ -266,7 +151,7 @@ export default function Home() {
   }[lang];
 
   return (
-    <main className="min-h-screen bg-orange-50/30 text-slate-900 font-sans antialiased">
+    <main className="min-h-screen bg-white text-slate-900 font-sans antialiased">
       
       {/* MODAL DATA PROTECTION */}
       {isPrivacyOpen && (
@@ -310,54 +195,38 @@ export default function Home() {
       )}
 
       {/* NAVIGATION */}
-<nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex items-center justify-between shadow-sm">
-  
-  {/* Контейнер для логотипа и названия */}
-  <div className="flex-1 flex items-center relative h-full">
-    
-    {/* ЛОГО: Абсолютное позиционирование, чтобы не мешать центровке текста */}
-    <a href="#home" className="absolute left-0 flex items-center h-full group">
-        <img src="logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain transition-transform group-hover:rotate-12" />
-    </a>
+      <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
+        <a href="#home" className="flex items-center gap-3 h-full group">
+            <img src="logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain transition-transform group-hover:rotate-12" />
+            <span className="font-black uppercase italic tracking-tighter text-xl md:text-2xl">Ahvan <span className="text-orange-600">Tour</span></span>
+        </a>
+        <div className="hidden lg:flex gap-7 items-center ml-auto mr-8">
+          {Object.entries(menu).map(([key, label]: any) => (
+            <a key={key} href={`#${key}`} className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
+          ))}
+          <div className="flex gap-1 ml-4 border-l pl-6">
+            {Object.keys(LANGUAGES).map((l) => (
+              <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
+            ))}
+          </div>
+        </div>
+        <button className="lg:hidden p-2 text-slate-900" onClick={() => setIsMenuOpen(!isMenuOpen)}><Menu size={28} /></button>
 
-    {/* НАЗВАНИЕ: Теперь mx-auto сработает идеально, так как логотип вынесен из потока */}
-    <span className="mx-auto font-black uppercase italic tracking-tighter text-xl md:text-2xl whitespace-nowrap">
-        Ahvan <span className="text-orange-600">Tour</span>
-    </span>
-  </div>
-
-  {/* ДЕСКТОПНОЕ МЕНЮ */}
-  <div className="hidden lg:flex gap-7 items-center ml-8 mr-8">
-    {Object.entries(menu).map(([key, label]: any) => (
-      <a key={key} href={`#${key}`} className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
-    ))}
-    <div className="flex gap-1 ml-4 border-l pl-6">
-      {Object.keys(LANGUAGES).map((l) => (
-        <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
-      ))}
-    </div>
-  </div>
-
-  {/* МОБИЛЬНАЯ КНОПКА */}
-  <button className="lg:hidden p-2 text-slate-900 z-[160]" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-    <Menu size={28} />
-  </button>
-
-  {/* MOBILE MENU */}
-  {isMenuOpen && (
-    <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top z-[150]">
-      {Object.entries(menu).map(([key, label]: any) => (
-        <a key={key} href={`#${key}`} onClick={() => setIsMenuOpen(false)} className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic">{label}</a>
-      ))}
-      <button onClick={() => { setIsPrivacyOpen(true); setIsMenuOpen(false); }} className="text-sm text-left uppercase font-black tracking-widest text-orange-600 border-b pb-2 italic">{cur.privacyTitle}</button>
-      <div className="flex flex-wrap gap-2 pt-2">
-        {Object.keys(LANGUAGES).map((l) => (
-          <button key={l} onClick={() => { setLang(l); setIsMenuOpen(false); }} className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border ${lang === l ? 'bg-orange-600 text-white' : 'bg-slate-50 text-slate-500'}`}>{LANGUAGES[l].name}</button>
-        ))}
-      </div>
-    </div>
-  )}
-</nav>
+        {/* MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top z-[150]">
+            {Object.entries(menu).map(([key, label]: any) => (
+              <a key={key} href={`#${key}`} onClick={() => setIsMenuOpen(false)} className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic">{label}</a>
+            ))}
+            <button onClick={() => { setIsPrivacyOpen(true); setIsMenuOpen(false); }} className="text-sm text-left uppercase font-black tracking-widest text-orange-600 border-b pb-2 italic">{cur.privacyTitle}</button>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {Object.keys(LANGUAGES).map((l) => (
+                <button key={l} onClick={() => { setLang(l); setIsMenuOpen(false); }} className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border ${lang === l ? 'bg-orange-600 text-white' : 'bg-slate-50 text-slate-500'}`}>{LANGUAGES[l].name}</button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
 
       {/* HERO */}
       <section id="home" className="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-slate-900" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://i2.wp.com/see.news/images/2024/03/-1711659992-0.jpg?resize=750,500&ssl=1')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
@@ -389,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* GALLERY */}
-      <section id="gallery" className="py-24 bg-slate-50 scroll-mt-20 text-center">
+      <section id="gallery" className="py-24 bg-white scroll-mt-20 text-center">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter mb-16">{cur.galleryTitle}</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-left">
