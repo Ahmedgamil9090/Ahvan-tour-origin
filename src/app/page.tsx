@@ -11,7 +11,7 @@ export default function Home() {
 
   const t = LANGUAGES[lang];
 
-  const CONTENT_DATA: any = {
+   const CONTENT_DATA: any = {
     ru: {
       aboutTitle: "О нас",
       galleryTitle: "Галерея",
@@ -24,12 +24,30 @@ export default function Home() {
       slogan: "Ahvan Tour — это доверие, опыт и исключительный сервис.",
       contactInvite: "Свяжитесь со мной для получения дополнительной информации или бронирования.",
       badge: "Опыт с 2006",
-      privacyTitle: "Защита данных",
+      privacyTitle: "Data Protection",
       privacyBody: (
-        <div className="space-y-4">
-          <p>Лицом, ответственным в значении законов о защите данных, является: <strong>Ahmed (Ahvan Tour)</strong></p>
-          <h4 className="font-bold border-b pb-2 text-slate-900">Ваши права</h4>
-          <p>Вы можете в любое время реализовать права на информацию, исправление, удаление и ограничение обработки ваших данных (GDPR).</p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Закрыть"
@@ -48,10 +66,28 @@ export default function Home() {
       badge: "Since 2006",
       privacyTitle: "Data Protection",
       privacyBody: (
-        <div className="space-y-4">
-          <p>The person responsible within the meaning of the data protection laws is: <strong>Ahmed (Ahvan Tour)</strong></p>
-          <h4 className="font-bold border-b pb-2 text-slate-900">Your data subject rights</h4>
-          <p>You can exercise the following rights at any time: Information, Correction, Deletion, and Restriction of data processing (GDPR).</p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Close"
@@ -68,11 +104,30 @@ export default function Home() {
       slogan: "Ahvan Tour steht für Vertrauen, Erfahrung und außergewöhnlichen Service.",
       contactInvite: "Kontaktieren Sie mich gerne für weitere Informationen oder Buchungen.",
       badge: "Seit 2006",
-      privacyTitle: "Datenschutz",
+      privacyTitle: "Datenschutz (GDPR)",
       privacyBody: (
-        <div className="space-y-4">
-          <p>Verantwortlich im Sinne der Datenschutzgesetze ist: <strong>Ahmed (Ahvan Tour)</strong></p>
-          <p>Sie haben jederzeit das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten gemäß DSGVO.</p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Schließen"
@@ -89,10 +144,30 @@ export default function Home() {
       slogan: "Ahvan Tour to zaufanie, doświadczenie i wyjątkowa obsługa.",
       contactInvite: "Zapraszam do kontaktu w celu uzyskania informacji lub rezerwacji.",
       badge: "Od 2006",
-      privacyTitle: "Ochrona danych",
+      privacyTitle: "Data Protection",
       privacyBody: (
-        <div className="space-y-4">
-          <p>Osobą odpowiedzialną za ochronę danych jest: <strong>Ahmed (Ahvan Tour)</strong></p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Zamknij"
@@ -111,8 +186,28 @@ export default function Home() {
       badge: "Depuis 2006",
       privacyTitle: "Protection des données",
       privacyBody: (
-        <div className="space-y-4">
-          <p>Le responsable de la protection des données est : <strong>Ahmed (Ahvan Tour)</strong></p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Fermer"
@@ -131,8 +226,28 @@ export default function Home() {
       badge: "Din 2006",
       privacyTitle: "Protecția datelor",
       privacyBody: (
-        <div className="space-y-4">
-          <p>Persoana responsabilă este: <strong>Ahmed (Ahvan Tour)</strong></p>
+        <div className="space-y-6 text-slate-600 text-left">
+          <p>The person responsible within the meaning of the data protection laws, in particular the EU General Data Protection Regulation (GDPR), is: <strong>Ahmed Gamil</strong></p>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Your data subject rights</h4>
+            <p>You can exercise the following rights at any time:</p>
+            <ul className="list-disc pl-5 space-y-1 mt-2 text-xs">
+              <li>Information about your data stored by us (Art. 15 GDPR)</li>
+              <li>Correction of incorrect personal data (Art. 16 GDPR)</li>
+              <li>Deletion of your data stored by us (Art. 17 GDPR)</li>
+              <li>Restriction of data processing (Art. 18 GDPR)</li>
+              <li>Objection to the processing of your data (Art. 21 GDPR)</li>
+              <li>Data transferability (Art. 20 GDPR)</li>
+            </ul>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">General Information</h4>
+            <p>When you access our website, information of a general nature (server log files) is automatically recorded. This includes your IP address, browser type, and operating system. This is processed to ensure connection stability and system security based on Art. 6 (1) (f) GDPR.</p>
+          </section>
+          <section>
+            <h4 className="font-bold text-slate-900 border-b pb-1 mb-2 text-base">Cookies</h4>
+            <p>Like many other websites, we also use "cookies". These are small text files stored on your device to improve the user experience.</p>
+          </section>
         </div>
       ),
       privacyClose: "Închide"
