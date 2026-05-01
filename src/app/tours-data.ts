@@ -16,9 +16,24 @@ export const LANGUAGES: any = {
     toursTitle: "Popular Excursions", 
     btn: "Book Now", 
     waHello: "Hello! I want to book a tour with AhVan Tour: ",
-    transTitle: "Comfortable",
-    transName: "Transfer",
-    transDesc: "We ensure your comfort from the first minutes in Egypt. We will meet you at the airport, help with luggage, and deliver you anywhere in the country in modern cars."
+    transferTitle: "Your Reliable Transfer Service in Hurghada & Surroundings",
+    transferSubtitle: "Welcome to your trusted partner for comfortable and safe transportation! We offer customized transfer services tailored to your needs – flexible, punctual, and at fair prices.",
+    transferGroupText: "Whether you are traveling alone, as a couple, with family, or in a group – we always have the right vehicle for you:",
+    transferVehicles: [
+      "Small cars for quick and budget-friendly rides",
+      "Mid-size vehicles for comfort and flexibility",
+      "Large vehicles & vans for families and groups"
+    ],
+    transferServicesTitle: "Our Services:",
+    transferServices: [
+      { icon: "✈️", text: "Airport Transfers – stress-free rides from the airport to your hotel" },
+      { icon: "🏨", text: "Hotel Transfers – reliable transport to any destination" },
+      { icon: "🛍️", text: "Shopping Trips – explore the best shopping spots" },
+      { icon: "🏙️", text: "City Tours – discover Hurghada like a local" },
+      { icon: "📍", text: "Custom Trips – you choose the destination and time" }
+    ],
+    transferFooter: "We focus on safety, cleanliness, and customer satisfaction. Our drivers are experienced, friendly, and multilingual.",
+    transferCTA: "📲 Contact us now and book your ride easily via WhatsApp!"
   },
   ru: { 
     name: "RU", 
