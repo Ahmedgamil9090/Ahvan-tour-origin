@@ -313,7 +313,7 @@ export default function Home() {
       <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
         <a href="#home" className="flex items-center gap-3 h-full group">
             <img src="logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain transition-transform group-hover:rotate-12" />
-            <span className="font-black uppercase italic tracking-tighter text-xl md:text-2xl">Ahvan <span className="text-orange-600">Tour</span></span>
+            <span className="font-black uppercase italic tracking-tighter text-xl md:text-2xl flex-1 text-center">Ahvan <span className="text-orange-600">Tour</span></span>
         </a>
         <div className="hidden lg:flex gap-7 items-center ml-auto mr-8">
           {Object.entries(menu).map(([key, label]: any) => (
