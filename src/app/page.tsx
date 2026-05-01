@@ -407,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* TRANSFER */}
-      <section id="transfer" className="py-24 bg-slate-50 scroll-mt-20">
+      <section id="transfer" className="pt-12 pb-24 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="text-left">
