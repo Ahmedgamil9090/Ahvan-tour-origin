@@ -429,53 +429,57 @@ export default function Home() {
       </section>
 
       {/* ABOUT US */}
-      <section id="about" className="py-24 bg-slate-50 scroll-mt-20 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative flex justify-center items-center">
-             <div className="relative z-10 w-full aspect-square max-w-[500px] bg-transparent rounded-[3.5rem] shadow-2xl flex items-center justify-center p-12 overflow-hidden group">
-  <img 
-    src="logo.svg" 
-    className="w-full h-auto transition-transform duration-700 group-hover:scale-105 mix-blend-multiply" 
-    alt="Logo" 
-  />
-</div>
-              <div className="absolute -bottom-6 -right-6 bg-orange-600 text-white p-8 rounded-3xl shadow-xl hidden md:block z-20">
-                <div className="text-4xl font-black italic leading-none">2006</div>
-                <div className="text-[10px] uppercase font-bold tracking-widest opacity-80">{cur.badge}</div>
-              </div>
-            </div>
-            <div className="relative z-10 text-left">
-              <div className="flex items-center gap-2 text-orange-600 font-black uppercase text-xs tracking-[0.3em] mb-6"><ShieldCheck size={18} /> Reliable & Professional</div>
-              <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none text-slate-900 mb-8">{cur.aboutTitle}</h2>
-              <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed">
-                <p className="font-bold text-slate-900 text-2xl">{cur.welcome}</p>
-                <p>{cur.founder}</p>
-                <p>{cur.background}</p>
-                
-                <div className="pt-4">
-                  <p className="font-black uppercase text-xs tracking-widest text-slate-900 mb-4">{cur.listTitle}</p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {cur.list?.map((item: string, i: number) => (
-                      <div key={i} className="flex items-center gap-2 text-[11px] font-black uppercase text-slate-800 tracking-wider bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                        <Star size={12} className="text-orange-600 fill-orange-600" /> {item}
-                      </div>
-                    ))}
-                  </div>
-                </div>
+<section id="about" className="py-24 bg-transparent scroll-mt-20 overflow-hidden"> {/* Исправлено: bg-transparent */}
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="relative flex justify-center items-center">
+        {/* Удалена тень shadow-2xl, так как она рисует темный квадрат вокруг прозрачного блока */}
+        <div className="relative z-10 w-full aspect-square max-w-[500px] bg-transparent rounded-[3.5rem] flex items-center justify-center p-12 overflow-hidden group">
+          <img 
+            src="logo.svg" 
+            className="w-full h-auto transition-transform duration-700 group-hover:scale-105" 
+            alt="Logo" 
+          />
+        </div>
+        
+        <div className="absolute -bottom-6 -right-6 bg-orange-600 text-white p-8 rounded-3xl shadow-xl hidden md:block z-20">
+          <div className="text-4xl font-black italic leading-none">2006</div>
+          <div className="text-[10px] uppercase font-bold tracking-widest opacity-80">{cur.badge}</div>
+        </div>
+      </div>
 
-                <p className="pt-4">{cur.footerAbout}</p>
-                
-                <div className="mt-8 p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm italic text-slate-700 border-l-8 border-l-orange-600">
-                  <span className="text-orange-600 mr-2">👉</span> {cur.slogan}
+      <div className="relative z-10 text-left">
+        {/* Остальной контент без изменений */}
+        <div className="flex items-center gap-2 text-orange-600 font-black uppercase text-xs tracking-[0.3em] mb-6"><ShieldCheck size={18} /> Reliable & Professional</div>
+        <h2 className="text-5xl md:text-7xl font-black uppercase italic tracking-tighter leading-none text-slate-900 mb-8">{cur.aboutTitle}</h2>
+        <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed">
+          <p className="font-bold text-slate-900 text-2xl">{cur.welcome}</p>
+          <p>{cur.founder}</p>
+          <p>{cur.background}</p>
+          
+          <div className="pt-4">
+            <p className="font-black uppercase text-xs tracking-widest text-slate-900 mb-4">{cur.listTitle}</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {cur.list?.map((item: string, i: number) => (
+                <div key={i} className="flex items-center gap-2 text-[11px] font-black uppercase text-slate-800 tracking-wider bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                  <Star size={12} className="text-orange-600 fill-orange-600" /> {item}
                 </div>
-
-                <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">{cur.contactInvite}</p>
-              </div>
+              ))}
             </div>
           </div>
+
+          <p className="pt-4">{cur.footerAbout}</p>
+          
+          <div className="mt-8 p-8 bg-white rounded-[2rem] border border-slate-100 shadow-sm italic text-slate-700 border-l-8 border-l-orange-600">
+            <span className="text-orange-600 mr-2">👉</span> {cur.slogan}
+          </div>
+
+          <p className="text-sm font-bold text-slate-400 uppercase tracking-widest">{cur.contactInvite}</p>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER */}
       <footer id="contact" className="py-24 bg-slate-950 text-white flex flex-col items-center">
