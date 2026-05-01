@@ -311,28 +311,37 @@ export default function Home() {
 
       {/* NAVIGATION */}
       <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex justify-between items-center shadow-sm">
-    {/* 1. Логотип (слева) */}
-    <a href="#home" className="flex items-center h-full group">
-        <img src="logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain transition-transform group-hover:rotate-12" />
-    </a>
+        <a href="#home" className="flex items-center gap-3 h-full group">
+            <img src="logo.svg" alt="Logo" className="h-10 md:h-14 w-auto object-contain transition-transform group-hover:rotate-12" />
+            <span className="font-black uppercase italic tracking-tighter text-xl md:text-2xl">Ahvan <span className="text-orange-600">Tour</span></span>
+        </a>
+        <div className="hidden lg:flex gap-7 items-center ml-auto mr-8">
+          {Object.entries(menu).map(([key, label]: any) => (
+            <a key={key} href={`#${key}`} className="text-[10px] uppercase font-black tracking-[0.2em] text-slate-600 hover:text-orange-600 transition-colors italic">{label}</a>
+          ))}
+          <div className="flex gap-1 ml-4 border-l pl-6">
+            {Object.keys(LANGUAGES).map((l) => (
+              <button key={l} onClick={() => setLang(l)} className={`text-[10px] font-bold px-2 py-1 rounded-md border ${lang === l ? 'bg-orange-600 text-white border-orange-600' : 'text-slate-400 border-transparent'}`}>{LANGUAGES[l].name}</button>
+            ))}
+          </div>
+        </div>
+        <button className="lg:hidden p-2 text-slate-900" onClick={() => setIsMenuOpen(!isMenuOpen)}><Menu size={28} /></button>
 
-    {/* 2. Название (по центру) */}
-    <div className="flex-1 text-center">
-        <span className="font-black uppercase italic tracking-tighter text-xl md:text-2xl whitespace-nowrap">
-            Ahvan <span className="text-orange-600">Tour</span>
-        </span>
-    </div>
-
-    {/* 3. Навигация / Меню (справа) */}
-    <div className="hidden lg:flex gap-7 items-center">
-        {/* Ваши пункты меню здесь */}
-    </div>
-    
-    {/* Кнопка мобильного меню */}
-    <button className="lg:hidden p-2 text-slate-900" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-        <Menu size={28} />
-    </button>
-</nav>
+        {/* MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="absolute top-20 left-0 w-full bg-white border-b shadow-2xl lg:hidden flex flex-col p-6 gap-4 animate-in slide-in-from-top z-[150]">
+            {Object.entries(menu).map(([key, label]: any) => (
+              <a key={key} href={`#${key}`} onClick={() => setIsMenuOpen(false)} className="text-lg uppercase font-black tracking-widest text-slate-900 border-b pb-2 italic">{label}</a>
+            ))}
+            <button onClick={() => { setIsPrivacyOpen(true); setIsMenuOpen(false); }} className="text-sm text-left uppercase font-black tracking-widest text-orange-600 border-b pb-2 italic">{cur.privacyTitle}</button>
+            <div className="flex flex-wrap gap-2 pt-2">
+              {Object.keys(LANGUAGES).map((l) => (
+                <button key={l} onClick={() => { setLang(l); setIsMenuOpen(false); }} className={`flex-1 min-w-[60px] text-xs font-bold py-3 rounded-xl border ${lang === l ? 'bg-orange-600 text-white' : 'bg-slate-50 text-slate-500'}`}>{LANGUAGES[l].name}</button>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
 
       {/* HERO */}
       <section id="home" className="relative h-[80vh] flex items-center justify-center text-center overflow-hidden bg-slate-900" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('https://i2.wp.com/see.news/images/2024/03/-1711659992-0.jpg?resize=750,500&ssl=1')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
