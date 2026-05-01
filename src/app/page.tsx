@@ -138,6 +138,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 4. GALLERY - Фото */}
+      <section id="gallery" className="py-24 bg-white scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
+            {TOURS.slice(0, 4).map((tour: any) => (
+              <div key={tour.id} onClick={() => setActiveAlbum(tour)} className="group relative h-64 rounded-3xl overflow-hidden cursor-pointer">
+                <img src={tour.image} className="w-full h-full object-cover transition-transform group-hover:scale-110" alt="" />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                   <Images className="text-white" size={32} />
+                </div>
+              </div>
+            ))}
+        </div>
+      </section>
+
       {/* 3. TRANSFER - Машины */}
       <section id="transfer" className="py-24 bg-slate-50 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-6">
@@ -155,20 +169,6 @@ export default function Home() {
                 </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* 4. GALLERY - Фото */}
-      <section id="gallery" className="py-24 bg-white scroll-mt-20">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {TOURS.slice(0, 4).map((tour: any) => (
-              <div key={tour.id} onClick={() => setActiveAlbum(tour)} className="group relative h-64 rounded-3xl overflow-hidden cursor-pointer">
-                <img src={tour.image} className="w-full h-full object-cover transition-transform group-hover:scale-110" alt="" />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                   <Images className="text-white" size={32} />
-                </div>
-              </div>
-            ))}
         </div>
       </section>
 
