@@ -313,27 +313,25 @@ export default function Home() {
 <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex items-center justify-between shadow-sm">
   
   {/* Контейнер для логотипа и названия */}
-  <div className="flex-1 flex items-center relative h-full">
-    
-    {/* ЛОГО: Абсолютное позиционирование, чтобы не мешать центровке текста */}
-    <a href="#home" className="absolute left-0 flex items-center h-full group">
-        <img src="logo.svg" alt="Logo" className="h-14 md:h-20 w-auto object-contain transition-transform group-hover:rotate-12" />
-    </a>
+  <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
+  {/* Само лого-картинка (чемодан) */}
+  <img src="/logo.png" alt="Logo" className="h-8 md:h-12 w-auto" />
 
-    {/* НАЗВАНИЕ: Теперь mx-auto сработает идеально, так как логотип вынесен из потока */}
-    <span className="
-  /* Базовые стили и мобилка (оставляем аккуратным) */
-  text-xl font-black uppercase italic tracking-tighter text-slate-900 
-  
-  /* Десктоп (увеличиваем и растягиваем) */
-  md:text-3xl      /* Делаем шрифт заметно больше */
-  md:tracking-widest /* Растягиваем расстояние между буквами */
-  md:mx-auto       /* Помогаем центрироваться, если нужно заполнить пустоту */
-  transition-all duration-300
-">
-  {t.brand}
-</span>
-  </div>
+  {/* Название бренда */}
+  <span className="
+    /* База: мобилка (компактно, чтобы не налезало) */
+    text-lg font-[1000] uppercase italic tracking-tighter leading-none
+    flex flex-row gap-1
+    
+    /* Десктоп: растягиваем и увеличиваем */
+    md:text-4xl 
+    md:tracking-[0.2em] 
+    transition-all duration-300
+  ">
+    <span className="text-slate-900">AHVAN</span>
+    <span className="text-orange-600">TOUR</span>
+  </span>
+</div>
 
   {/* ДЕСКТОПНОЕ МЕНЮ */}
   <div className="hidden lg:flex gap-7 items-center ml-8 mr-8">
