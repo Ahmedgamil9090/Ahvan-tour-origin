@@ -313,19 +313,24 @@ export default function Home() {
 <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex items-center justify-between shadow-sm">
   
   {/* Контейнер для логотипа и названия */}
-  <div className="flex items-center gap-3 md:gap-6 flex-shrink-0">
-  {/* Само лого-картинка (чемодан) */}
-  <img src="logo.svg" alt="Logo" className="h-8 md:h-12 w-auto" />
+  <div className="flex items-center flex-shrink-0">
+  {/* Логотип-картинка с отступом справа на десктопе */}
+  <img 
+    src="/logo.png" 
+    alt="Logo" 
+    className="h-8 md:h-12 w-auto mr-3 md:mr-10 transition-all" 
+  />
 
   {/* Название бренда */}
   <span className="
-    /* База: мобилка (компактно, чтобы не налезало) */
+    /* База: мобилка */
     text-lg font-[1000] uppercase italic tracking-tighter leading-none
     flex flex-row gap-1
     
-    /* Десктоп: растягиваем и увеличиваем */
+    /* Десктоп: увеличиваем, растягиваем и отодвигаем */
     md:text-4xl 
-    md:tracking-[0.2em] 
+    md:tracking-[0.25em] 
+    md:ml-4
     transition-all duration-300
   ">
     <span className="text-slate-900">AHVAN</span>
