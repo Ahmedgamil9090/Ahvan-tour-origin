@@ -317,7 +317,7 @@ export default function Home() {
     
     {/* ЛОГО: Абсолютное позиционирование, чтобы не мешать центровке текста */}
     <a href="#home" className="absolute left-0 flex items-center h-full group">
-        <img src="logo.svg" alt="Logo" className="h-12 md:h-16 w-auto object-contain transition-transform group-hover:rotate-12" />
+        <img src="logo.svg" alt="Logo" className="h-14 md:h-18 w-auto object-contain transition-transform group-hover:rotate-12" />
     </a>
 
     {/* НАЗВАНИЕ: Теперь mx-auto сработает идеально, так как логотип вынесен из потока */}
