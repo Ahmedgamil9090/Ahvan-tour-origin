@@ -670,7 +670,7 @@ export default function Home() {
       <footer id="contact" className="py-24 bg-slate-950 text-white flex flex-col items-center">
           <div className="flex items-center gap-3 mb-8 opacity-80 group cursor-pointer">
             <img src="logo.svg" alt="Logo" className="h-12 w-auto transition-transform group-hover:scale-110" />
-            <span className="font-black uppercase italic tracking-tighter text-2xl">Ahvan Tour</span>
+            <span className="font-black uppercase italic tracking-tighter text-2xl -ml-2 block text-center">Ahvan Tour</span>
           </div>
           <a href={`tel:${CONTACTS.phone}`} className="text-2xl font-bold mb-12 tracking-widest hover:text-orange-500 transition-colors">{CONTACTS.phone}</a>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-8 mb-16 opacity-80">
