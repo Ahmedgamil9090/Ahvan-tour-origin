@@ -11,7 +11,7 @@ export const LANGUAGES: any = {
 
   en: {
     name: "EN",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Hurghada is Waiting",
     heroSub: "Best excursions from direct organizers",
     toursTitle: "Popular Excursions",
@@ -40,7 +40,7 @@ export const LANGUAGES: any = {
 
   ru: {
     name: "RU",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Хургада ждет тебя",
     heroSub: "Лучшие экскурсии от прямых организаторов",
     toursTitle: "Популярные экскурсии",
@@ -69,7 +69,7 @@ export const LANGUAGES: any = {
 
   de: {
     name: "DE",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Hurghada Wartet",
     heroSub: "Beste Ausflüge direkt vom Veranstalter",
     toursTitle: "Beliebte Touren",
@@ -98,7 +98,7 @@ export const LANGUAGES: any = {
 
   pl: {
     name: "PL",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Hurghada Czeka",
     heroSub: "Najlepsze wycieczki bezpośrednio",
     toursTitle: "Popularne wycieczki",
@@ -127,7 +127,7 @@ export const LANGUAGES: any = {
 
   fr: {
     name: "FR",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Hurghada vous Attend",
     heroSub: "Meilleures excursions",
     toursTitle: "Excursions Populaires",
@@ -156,7 +156,7 @@ export const LANGUAGES: any = {
 
   ro: {
     name: "RO",
-    brand: "AhWan Tour",
+    brand: "Ahvan Tour",
     heroTitle: "Hurghada te Așteaptă",
     heroSub: "Cele mai bune excursii",
     toursTitle: "Excursii Populare",
