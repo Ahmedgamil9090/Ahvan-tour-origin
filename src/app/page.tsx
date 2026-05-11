@@ -8,6 +8,9 @@ export default function Home() {
   const [activeAlbum, setActiveAlbum] = useState<any>(null); 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isPrivacyOpen, setIsPrivacyOpen] = useState(false);
+  // Добавляем эти две строки для Lightbox (карусели)
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [activeImgIndex, setActiveImgIndex] = useState(0);
 
   const t = LANGUAGES[lang];
 
@@ -289,25 +292,107 @@ export default function Home() {
       )}
 
       {/* MODAL ALBUM */}
-      {activeAlbum && (
-        <div className="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4">
-            <button onClick={() => setActiveAlbum(null)} className="absolute top-6 right-6 text-white z-[210] hover:scale-110 transition-transform"><X size={40} /></button>
-            <div className="max-w-6xl w-full h-full overflow-y-auto p-4 custom-scrollbar">
-              <h2 className="text-white text-4xl md:text-6xl font-black uppercase italic mb-10 mt-16 tracking-tighter">{activeAlbum.names[lang]}</h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-                {activeAlbum.gallery?.map((img: string, idx: number) => (
-                  <div key={idx} className="aspect-square overflow-hidden rounded-2xl border border-white/5"><img src={img} className="w-full h-full object-cover" alt="" /></div>
-                ))}
-              </div>
-              <div className="max-w-4xl bg-white/5 rounded-[2.5rem] p-8 md:p-12 mb-20 border border-white/10 backdrop-blur-sm">
-                <p className="text-white text-xl md:text-2xl leading-relaxed opacity-90 whitespace-pre-line">{activeAlbum.desc[lang]}</p>
-                <div className="mt-10">
-                  <a href={`https://wa.me/${CONTACTS.whatsapp.replace(/\+/g, '')}?text=${encodeURIComponent(t.waHello + activeAlbum.names[lang])}`} className="bg-orange-600 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl inline-block">{t.btn} — ${activeAlbum.price}</a>
-                </div>
-              </div>
+{activeAlbum && (
+  <>
+    <div className="fixed inset-0 z-[200] bg-slate-950/95 backdrop-blur-xl flex items-center justify-center p-4">
+      <button onClick={() => setActiveAlbum(null)} className="absolute top-6 right-6 text-white z-[210] hover:scale-110 transition-transform">
+        <X size={40} />
+      </button>
+      
+      <div className="max-w-6xl w-full h-full overflow-y-auto p-4 custom-scrollbar">
+        <h2 className="text-white text-4xl md:text-6xl font-black uppercase italic mb-10 mt-16 tracking-tighter">
+          {activeAlbum.names[lang]}
+        </h2>
+
+        {/* Сетка фото с кликом для увеличения */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {activeAlbum.gallery?.map((img: string, idx: number) => (
+            <div 
+              key={idx} 
+              className="aspect-square overflow-hidden rounded-2xl border border-white/5 cursor-zoom-in group"
+              onClick={() => {
+                setActiveImgIndex(idx);
+                setIsLightboxOpen(true);
+              }}
+            >
+              <img 
+                src={img} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                alt="" 
+              />
             </div>
+          ))}
         </div>
-      )}
+
+        <div className="max-w-4xl bg-white/5 rounded-[2.5rem] p-8 md:p-12 mb-20 border border-white/10 backdrop-blur-sm">
+          <p className="text-white text-xl md:text-2xl leading-relaxed opacity-90 whitespace-pre-line">
+            {activeAlbum.desc[lang]}
+          </p>
+          <div className="mt-10">
+            <a 
+              href={`https://wa.me/${CONTACTS.whatsapp.replace(/\+/g, '')}?text=${encodeURIComponent(t.waHello + activeAlbum.names[lang])}`} 
+              className="bg-orange-600 text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-[0.2em] shadow-xl inline-block hover:bg-orange-500 transition-colors"
+            >
+              {t.btn} — ${activeAlbum.price}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* LIGHTBOX (КАРУСЕЛЬ) — Второй уровень модалки */}
+    {isLightboxOpen && (
+      <div className="fixed inset-0 z-[300] bg-black/98 flex items-center justify-center p-4 backdrop-blur-md">
+        {/* Закрыть карусель */}
+        <button 
+          onClick={() => setIsLightboxOpen(false)}
+          className="absolute top-6 right-6 text-white/70 hover:text-white transition-all z-[310]"
+        >
+          <X size={50} strokeWidth={1.5} />
+        </button>
+
+        {/* Назад */}
+        <button 
+          className="absolute left-4 md:left-8 text-white/50 hover:text-orange-600 transition-all p-4 z-[310]"
+          onClick={(e) => {
+            e.stopPropagation();
+            setActiveImgIndex(prev => prev === 0 ? activeAlbum.gallery.length - 1 : prev - 1);
+          }}
+        >
+          <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        {/* Контейнер с картинкой */}
+        <div className="relative max-w-7xl w-full h-[85vh] flex flex-col items-center justify-center select-none">
+          <img 
+            src={activeAlbum.gallery[activeImgIndex]} 
+            className="max-w-full max-h-full object-contain rounded-lg shadow-[0_0_50px_rgba(0,0,0,0.5)] animate-in zoom-in duration-300"
+            alt="Enlarged tour photo"
+          />
+          {/* Счетчик под фото */}
+          <div className="mt-6 text-white/30 font-mono tracking-[0.5em] text-sm uppercase">
+            {activeImgIndex + 1} / {activeAlbum.gallery.length}
+          </div>
+        </div>
+
+        {/* Вперед */}
+        <button 
+          className="absolute right-4 md:right-8 text-white/50 hover:text-orange-600 transition-all p-4 z-[310]"
+          onClick={(e) => {
+            e.stopPropagation();
+            setActiveImgIndex(prev => prev === activeAlbum.gallery.length - 1 ? 0 : prev + 1);
+          }}
+        >
+          <svg className="w-12 h-12 md:w-16 md:h-16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    )}
+  </>
+)}
 
       {/* NAVIGATION */}
 <nav className="bg-white/95 backdrop-blur-lg border-b sticky top-0 z-[100] px-4 h-20 flex items-center justify-between shadow-sm">
