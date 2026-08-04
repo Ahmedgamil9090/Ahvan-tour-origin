@@ -1,4 +1,5 @@
 'use client';
+import Reviews from '@/components/Reviews';
 import { useState } from 'react';
 import { Instagram, Send, Facebook, X, ShieldCheck, Star, Menu } from 'lucide-react';
 import { TOURS, CONTACTS, LANGUAGES } from './tours-data';
@@ -664,6 +665,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+<Reviews lang={lang} />
 
 
         {/* FOOTER */}
