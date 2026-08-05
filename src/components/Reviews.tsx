@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Star } from 'lucide-react';
+import { Star, ExternalLink } from 'lucide-react';
 
 interface ReviewsProps {
   lang?: string;
@@ -9,6 +9,10 @@ interface ReviewsProps {
 
 export default function Reviews({ lang = 'en' }: ReviewsProps) {
   const isRu = lang === 'ru';
+
+  // 📌 ЗАГЛУШКИ (Позже просто замени '#', на реальные ссылки)
+  const GOOGLE_MAPS_LINK = "#";
+  const TRIPADVISOR_LINK = "#";
 
   const reviews = [
     {
@@ -47,6 +51,8 @@ export default function Reviews({ lang = 'en' }: ReviewsProps) {
   return (
     <section className="py-16 bg-slate-900 text-white" id="reviews">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Заголовок */}
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-3 tracking-tight">
             {isRu ? 'Отзывы наших гостей' : 'Guest Reviews'}
@@ -58,7 +64,8 @@ export default function Reviews({ lang = 'en' }: ReviewsProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Сетка карточек */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           {reviews.map((review) => (
             <div
               key={review.id}
@@ -89,6 +96,32 @@ export default function Reviews({ lang = 'en' }: ReviewsProps) {
             </div>
           ))}
         </div>
+
+        {/* Кнопки Google Maps и TripAdvisor с якорями */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+          
+          <a
+            href={GOOGLE_MAPS_LINK}
+            onClick={(e) => GOOGLE_MAPS_LINK === '#' && e.preventDefault()}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-slate-800 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-700 text-white text-sm font-medium transition-all shadow-lg hover:shadow-amber-500/10 group cursor-pointer"
+          >
+            <span className="text-lg">📍</span>
+            <span>{isRu ? 'Оставить отзыв на Google Maps' : 'Review us on Google Maps'}</span>
+            <ExternalLink className="w-4 h-4 text-slate-400 group-hover:text-amber-400 transition-colors" />
+          </a>
+
+          <a
+            href={TRIPADVISOR_LINK}
+            onClick={(e) => TRIPADVISOR_LINK === '#' && e.preventDefault()}
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-emerald-900/40 border border-emerald-700/50 hover:bg-emerald-800/50 text-white text-sm font-medium transition-all shadow-lg hover:shadow-emerald-500/10 group cursor-pointer"
+          >
+            <span className="text-lg">🦉</span>
+            <span>{isRu ? 'Читать отзывы на TripAdvisor' : 'Read reviews on TripAdvisor'}</span>
+            <ExternalLink className="w-4 h-4 text-emerald-400 group-hover:text-emerald-300 transition-colors" />
+          </a>
+
+        </div>
+
       </div>
     </section>
   );
