@@ -355,7 +355,43 @@ Cină și Spectacol Oriental: Savurați o cină BBQ cu muzică orientală și da
     ]
   },
   {
-    id: 4,
+  id: 4, // Проверь и поставь следующий порядковый ID
+  image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/dd/43/09.jpg", 
+  price: 65,
+  names: {
+    ru: "Абу Дабаб — Сноркелинг с черепахами",
+    en: "Abu Dabab Turtle Bay Snorkeling",
+    de: "Abu Dabab – Schnorcheln mit Schildkröten",
+    pl: "Abu Dabab – Snurkowanie z żółwiami",
+    fr: "Abu Dabab – Snorkeling avec les tortues",
+    ro: "Abu Dabab – Snorkeling cu țestoase"
+  },
+  desc: {
+    de: "Erlebe einen unvergesslichen Tag in der wunderschönen Abu-Dabab-Bucht bei Marsa Alam! 🌊🐢\n\nTauche ein in das kristallklare Wasser des Roten Meeres und entdecke die faszinierende Unterwasserwelt. Mit etwas Glück kannst du beim Schnorcheln große Meeresschildkröten ganz nah beobachten. 🐢🤿\n\n✨ DAS ERWARTET DICH:\n• 🏨 Abholung & Rückfahrt direkt vom Hotel\n• 🤿 Schnorcheln in der Abu-Dabab-Bucht\n• 🐢 Begegnungen mit Meeresschildkröten & Seekühen\n• 🪸 Bunte Korallenriffe & faszinierende Fische\n• 🍽️ Mittagessen & Softdrinks inklusive\n• 👨‍👩‍👧‍👦 Für Familien, Paare & Freunde geeignet\n\n💙 Unser Ziel ist es, euch glücklich zu machen und einen wunderschönen Urlaubstag zu schenken!",
+    
+    ru: "Проведите незабываемый день в живописной бухте Абу-Дабаб возле Марса-Алама! 🌊🐢\n\nПогрузитесь в кристально чистые воды Красного моря и откройте для себя удивительный подводный мир. Вам представится уникальный шанс поплавать бок о бок с гигантскими морскими черепахами и дюгонем (морской коровой)! 🐢🤿\n\n✨ В ПРОГРАММУ ВХОДИТ:\n• 🏨 Трансфер из отеля и обратно\n• 🤿 Сноркелинг в знаменитой бухте Абу-Дабаб\n• 🐢 Встреча с огромными морскими черепахами\n• 🪸 Красочные коралловые рифы и экзотические рыбы\n• 🍽️ Вкусный обед и безалкогольные напитки\n• 👨‍👩‍👧‍👦 Подходит для семей с детьми и компаний\n\n💙 Наша цель — подарить вам яркие эмоции и незабываемый отдых!",
+    
+    en: "Experience an unforgettable day in the beautiful Abu Dabab Bay near Marsa Alam! 🌊🐢\n\nDive into the crystal-clear waters of the Red Sea and discover the underwater world. Observe giant sea turtles up close in their natural habitat! 🐢🤿\n\n✨ HIGHLIGHTS:\n• 🏨 Hotel pick-up & drop-off included\n• 🤿 Snorkeling in Abu Dabab Bay\n• 🐢 Encounters with giant sea turtles & dugongs\n• 🪸 Vibrant coral reefs & marine life\n• 🍽️ Lunch & soft drinks included\n• 👨‍👩‍👧‍👦 Perfect for families, couples & friends\n\n💙 Our goal is to give you a wonderful holiday experience!",
+    
+    pl: "Niezapomniany dzień w pięknej zatoce Abu Dabab koło Marsa Alam! 🌊🐢\n\nOdkryj podwodny świat Czerwonego Morza i pływaj razem z gigantycznymi żółwiami morskimi i diugoniami! 🐢🤿\n\n✨ W PROGRAMIE:\n• 🏨 Transfer z i do hotelu\n• 🤿 Snurkowanie w zatoce Abu Dabab\n• 🐢 Spotkanie z żółwiami morskimi\n• 🍽️ Obiad i napoje w cenie\n• 👨‍👩‍👧‍👦 Idealne dla rodzin i grup.",
+    
+    fr: "Une journée inoubliable dans la magnifique baie d'Abu Dabab près de Marsa Alam ! 🌊🐢\n\nNagez avec les tortues marines géantes et découvrez les magnifiques récifs coralliens du Lagon. 🐢🤿\n\n✨ INCLUS:\n• 🏨 Transfert depuis votre hôtel A/R\n• 🤿 Snorkeling à Abu Dabab\n• 🐢 Rencontre avec les tortues géantes\n• 🍽️ Déjeuner et boissons inclus\n• 👨‍👩‍👧‍👦 Idéal pour toute la famille.",
+    
+    ro: "O zi de neuitat în minunatul golf Abu Dabab din Marsa Alam! 🌊🐢\n\nExplorează lumea subacvatică și înoată alături de țestoase marine gigante și dugongi! 🐢🤿\n\n✨ INCLUS:\n• 🏨 Transfer de la și la hotel\n• 🤿 Snorkeling în golful Abu Dabab\n• 🐢 Întâlnire cu țestoasele gigante\n• 🍽️ Prânz și băuturi incluse\n• 👨‍👩‍👧‍👦 Ideal pentru familii și grupuri."
+  },
+  gallery: [
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/17/02/a4/79.jpg", // Черепаха крупным планом
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/11/45/bc/cf.jpg", // Красивый пляж
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/17/02/a4/7c.jpg", // Рифы и кораллы
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/52/0a/e8.jpg", // Сноркелинг
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/48/79/c6.jpg",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/15/54/95/c8.jpg",
+    "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/12/d7/bb/05.jpg",
+    "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/33/c9/37/6b/caption.jpg?w=1100&h=-1&s=1" // Море
+  ]
+},
+  {
+    id: 5,
     image: "https://media.istockphoto.com/id/2210168738/photo/man-scuba-diver-checking-beautiful-colorful-healthy-coral-reef-with-diversity-of-hard-corals.jpg?s=612x612&w=0&k=20&c=j0L6r2zoHXlm3KEs4PJiebUSyQVpTZPlyxO9Ftd6LzM=",
     price: 35,
     names: { 
@@ -424,7 +460,7 @@ Sub îndrumarea instructorilor certificați, veți descoperi lumea subacvatică 
   },
 
  {
-    id: 5,
+    id: 6,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2j8ntw9b99FtMMrHvyMRsY0ZIIzxXtYZ7Sg&s",
     price: 20,
     names: { 
@@ -486,7 +522,7 @@ Mergem în locuri cunoscute unde delfinii sunt văzuți des în sălbăticie. Ap
     ]
   },
     {
-    id: 6,
+    id: 7,
     image: "https://as1.ftcdn.net/v2/jpg/02/79/09/84/1000_F_279098467_wy75eVNsfvhmqULOxzoFvGsjJwtSLyx8.jpg",
     price: 114,
     names: { 
@@ -560,7 +596,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
     ]
   },
   {
-  id: 7, // Уникальный ID
+  id: 8, // Уникальный ID
   image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/08/0b/7c/cd.jpg", 
   price: 145,
   names: {
@@ -591,7 +627,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   ]
 },
     {
-  id: 8, // Проверь ID, чтобы не дублировался
+  id: 9, // Проверь ID, чтобы не дублировался
   image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/r/32/72/5d/d2/caption.jpg", // Главное фото
   price: 18,
   names: {
@@ -622,7 +658,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   ]
 },
 {
-    id: 9,
+    id: 10,
     image: "https://freebirdtravel.net/ImageBank/sea%20trip/-ImageBank-sea-trip-5833-jpg_856x450_5833.jpg",
     price: 22,
     names: { 
