@@ -189,7 +189,7 @@ export const TOURS: any = [
     {
     id: 1,
     image: "https://dynamic-media.tacdn.com/media/photo-o/2e/f1/e0/e0/caption.jpg?w=1400&h=1000&s=1",
-    price: 45,
+    price: 22,
     names: { 
       ru: "Оранжевый остров", 
       en: "Orange Bay Island", 
@@ -255,7 +255,7 @@ Bucurați-vă de un prânz bufet proaspăt preparat la bord. După aceea, vă a�
  {
     id: 2,
     image: "https://thumbs.dreamstime.com/b/off-road-vehicles-driving-sahara-sand-desert-23312292.jpg?w=992",
-    price: 28,
+    price: 19,
     names: { 
       ru: "Супер Сафари", 
       en: "Super Safari", 
@@ -357,7 +357,7 @@ Cină și Spectacol Oriental: Savurați o cină BBQ cu muzică orientală și da
   {
     id: 4,
     image: "https://media.istockphoto.com/id/2210168738/photo/man-scuba-diver-checking-beautiful-colorful-healthy-coral-reef-with-diversity-of-hard-corals.jpg?s=612x612&w=0&k=20&c=j0L6r2zoHXlm3KEs4PJiebUSyQVpTZPlyxO9Ftd6LzM=",
-    price: 55,
+    price: 35,
     names: { 
       ru: "Дайвинг", 
       en: "Diving", 
@@ -426,7 +426,7 @@ Sub îndrumarea instructorilor certificați, veți descoperi lumea subacvatică 
  {
     id: 5,
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2j8ntw9b99FtMMrHvyMRsY0ZIIzxXtYZ7Sg&s",
-    price: 35,
+    price: 20,
     names: { 
       ru: "Дом Дельфинов", 
       en: "Dolphin House", 
@@ -562,7 +562,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
   {
   id: 7, // Уникальный ID
   image: "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/08/0b/7c/cd.jpg", 
-  price: 169,
+  price: 145,
   names: {
     ru: "Скоростной катер (Speed Boat)",
     en: "Private Speed Boat",
