@@ -657,60 +657,7 @@ Bucurați-vă de un prânz delicios într-un restaurant local din Cairo. Întoar
     "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/32/70/47/c3/caption.jpg?w=1400&h=-1&s=1",
   ]
 },
-{
-    id: 10,
-    image: "https://freebirdtravel.net/ImageBank/sea%20trip/-ImageBank-sea-trip-5833-jpg_856x450_5833.jpg",
-    price: 22,
-    names: { 
-      ru: "Парасейлинг", 
-      en: "Parasailing", 
-      de: "Parasailing & Meerblick", 
-      pl: "Parasailing", 
-      fr: "Parachute ascensionnel", 
-      ro: "Parasailing" 
-    },
-    desc: { 
-      de: `Erleben Sie ein unvergessliches Abenteuer über dem Roten Meer! Genießen Sie die perfekte Mischung aus Nervenkitzel und atemberaubender Aussicht.
 
-Ihre Tour beginnt mit einer bequemen Abholung vom Hotel. Für Adrenalinliebhaber ist Parasailing das absolute Highlight – fliegen Sie alleine oder zu zweit 30–40 Meter über dem Meer und genießen Sie für 4 bis 7 Minuten einen atemberaubenden Blick über die Küste von Hurghada. Vorkenntnisse sind nicht erforderlich, unsere professionelle Crew kümmert sich um alles.
-
-Zusätzlich haben Sie die Möglichkeit, die Unterwasserwelt zu entdecken. Halten Sie die schönsten Momente mit Fotos fest und lassen Sie den Tag mit einem entspannten Rücktransfer zum Hotel ausklingen. Diese Tour ist ideal für alle, die das Rote Meer aus einer ganz neuen Perspektive erleben möchten!`,
-
-      ru: `Испытайте незабываемое приключение над Красным морем! Парасейлинг — это идеальное сочетание адреналина и захватывающих видов.
-
-Ваш тур начинается с удобного трансфера из отеля. Вы подниметесь на парашюте в одиночку или вдвоем на высоту 30–40 метров над уровнем моря. Полет длится от 4 до 7 минут, в течение которых перед вами откроется потрясающая панорама побережья Хургады. Никаких специальных навыков не требуется — наша профессиональная команда обеспечит полную безопасность.
-
-Запечатлейте эти моменты на фото и наслаждайтесь чувством свободы. После приземления и морской прогулки вас ждет комфортный обратный трансфер в отель. Это идеальный выбор для тех, кто хочет увидеть красоту Египта с высоты птичьего полета!`,
-
-      en: `Experience an unforgettable adventure above the Red Sea! Parasailing is the perfect mix of thrill and breathtaking views.
-
-Your tour begins with a convenient hotel pickup. For adrenaline lovers, flying 30–40 meters above the sea alone or in a pair is the ultimate highlight. Enjoy the stunning view over the Red Sea coast for 4 to 7 minutes. No previous experience is required — our professional crew handles everything.
-
-Capture the most beautiful moments with photos and end the day with a relaxed transfer back to your hotel. This tour is ideal for anyone who wants to experience the Red Sea from a completely new perspective!`,
-
-      pl: `Przeżyj niezapomnianą przygodę nad Morzem Czerwonym! Parasailing to idealne połączenie dreszczyku emocji i zapierających dech w piersiach widoków.
-
-Twoja wycieczka zaczyna się od wygodnego odbioru z hotelu. Leć sam lub w parze 30–40 metrów nad morzem i ciesz się niesamowitą panoramą wybrzeża Hurghady przez 4 do 7 minut. Nie jest wymagane żadne doświadczenie – nasza profesjonalna ekipa zadba o wszystko. Uwiecznij te chwile na zdjęciach i ciesz się wolnością!`,
-
-      fr: `Vivez une aventure inoubliable au-dessus de la mer Rouge ! Le parachute ascensionnel est le mélange parfait de sensations fortes et de vues imprenables.
-
-Pour les amateurs d'adrénaline, volez seul ou à deux à 30–40 mètres au-dessus de l'eau pendant 4 à 7 minutes. Aucune expérience préalable n'est nécessaire — notre équipe professionnelle s'occupe de tout. Capturez les plus beaux moments et terminez la journée par un transfert relaxant à votre hôtel.`,
-
-      ro: `Experimentați o aventură de neuitat deasupra Marii Roșii! Parasailing-ul este amestecul perfect de adrenalină și priveliști uluitoare.
-
-Zborul singur sau în pereche la 30–40 de metri deasupra mării timp de 4 până l-a 7 minute este punctul culminant al zilei. Nu este necesară experiență anterioară — echipajul nostru profesionist se ocupă de toate. Surprindeți cele mai frumoase momente în fotografii și bucurați-vă de un transfer relaxat înapoi la hotel.`
-    },
-    gallery: [
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbBtKgMB0hp7IN7RMGuTYighurrr0iGp08xQ&s",
-      "https://cdn.getyourguide.com/img/tour/3a7106359bddd890.jpeg/68.jpg",
-      "https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/11/c7/27/8d.jpg",
-      "https://media.tacdn.com/media/attractions-splice-spp-674x446/17/0c/e4/85.jpg",
-      "https://hurghadaforyou.com/sites/default/files/styles/medium/public/listings-gallery/Parasailing%20hurghada%20for%20you%204.jpg?itok=Tpz8sivL",
-      "https://d3rr2gvhjw0wwy.cloudfront.net/uploads/activity_teasers/301242/600x400-1-50-572d58cfe12d354b8ef89bf2b7fe481a.jpg",
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQx9rQvjyF_XniRKAt30mBZnzWVfP1GAnFfwQ&s",
-      "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/15/06/b2/caption.jpg?w=500&h=400&s=1"
-    ]
-  },
 ];
 export const menu = {
   home: "Home",
