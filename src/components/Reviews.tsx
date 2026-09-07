@@ -10,8 +10,8 @@ interface ReviewsProps {
 export default function Reviews({ lang = 'en' }: ReviewsProps) {
   const isRu = lang === 'ru';
 
-  // 📌 ЗАГЛУШКИ (Позже просто замени '#', на реальные ссылки)
-  const GOOGLE_MAPS_LINK = "#";
+  // 📌 ССЫЛКИ НА ОТЗЫВЫ
+  const GOOGLE_MAPS_LINK = "https://g.page/r/CflMhkmcPikiEAE/review";
   const TRIPADVISOR_LINK = "#";
 
   const reviews = [
@@ -97,12 +97,13 @@ export default function Reviews({ lang = 'en' }: ReviewsProps) {
           ))}
         </div>
 
-        {/* Кнопки Google Maps и TripAdvisor с якорями */}
+        {/* Кнопки Google Maps и TripAdvisor */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
           
           <a
             href={GOOGLE_MAPS_LINK}
-            onClick={(e) => GOOGLE_MAPS_LINK === '#' && e.preventDefault()}
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-slate-800 border border-slate-700 hover:border-amber-500/50 hover:bg-slate-700 text-white text-sm font-medium transition-all shadow-lg hover:shadow-amber-500/10 group cursor-pointer"
           >
             <span className="text-lg">📍</span>
@@ -112,6 +113,8 @@ export default function Reviews({ lang = 'en' }: ReviewsProps) {
 
           <a
             href={TRIPADVISOR_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={(e) => TRIPADVISOR_LINK === '#' && e.preventDefault()}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-6 py-3.5 rounded-xl bg-emerald-900/40 border border-emerald-700/50 hover:bg-emerald-800/50 text-white text-sm font-medium transition-all shadow-lg hover:shadow-emerald-500/10 group cursor-pointer"
           >
